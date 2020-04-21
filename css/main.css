@@ -111,6 +111,24 @@ header nav {
     font-weight: normal;
 }
 
+
+.handdrawn {
+    font-family: 'beth-ellen', sans-serif;
+    font-size: 1.3em;
+    background-image: url("../img/draftBg.png");
+    background-repeat: repeat-y;
+    padding-left: 10%;
+    padding-right: 2%;
+}
+
+.divider {
+    text-align: center;
+}
+
+.divider img {
+    width: 80%;
+}
+
 section#introduction {
     margin: 50px 50px 20px;
     text-align: center;
@@ -135,35 +153,37 @@ section#introduction p {
     margin-bottom: 15px;
 }
 
-.handdrawn {
-    font-family: 'beth-ellen', sans-serif;
-    font-size: 1.3em;
-    background-image: url("../img/draftBg.png");
-    padding-left: 10%;
-    padding-right: 2%;
-}
-
-.divider, #books {
+section#books {
     text-align: center;
-}
-
-.divider img {
-    width: 80%;
 }
 
 .bookCover {
     width: 40%;
 }
 
-#author aside {
+section#writings img {
+    position: relative;
+}
+
+section#author aside {
     text-align: right;
 }
 
-#author aside img {
-    width: 70%;
+section#author div:nth-of-type(1) {
+    text-align: right;
 }
 
-#author p {
+section#author aside img {
+    width: 90%;
+}
+
+section#author p {
     display: inline-block;
-    width: 50%;
+    text-align: left;
+}
+
+.bookReference {
+    font-family: 'blokletters-thin', sans-serif;
+    font-style: italic;
+    font-weight: bold;
 }
