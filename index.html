@@ -13,12 +13,33 @@
 </head>
 <body>
 <header>
-    <img>
-    <nav></nav>
+    <img id="logo" src="img/floraLogo.png" alt="Logo de Flora Lune">
+    <nav>
+        <span class="pencilLabels">Accueil</span>
+        <img class="pencils" src="img/pencil.png" alt="mainLink">
+        <span class="pencilLabels">Romans</span>
+        <img class="pencils" src="img/pencil.png" alt="novelLink">
+        <span class="pencilLabels">Nouvelles</span>
+        <img class="pencils" src="img/pencil.png" alt="storiesLink">
+        <span class="pencilLabels">Flora</span>
+        <img class="pencils" src="img/pencil.png" alt="authorLink">
+        <span class="pencilLabels">Soutenir</span>
+        <img class="pencils" src="img/pencil.png" alt="supportLink">
+    </nav>
 </header>
 
 <section>
 
 </section>
 </body>
+
+
+<script>
+    var sectionHtml = "";
+    for (let i = 0; i < 50; i++) {
+        sectionHtml += "<p> Texte pour remplir </p>"
+    }
+
+    $("section").html(sectionHtml);
+</script>
 </html>

@@ -44,3 +44,45 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+header, section {
+    display: inline-block;
+}
+
+header {
+    vertical-align: top;
+    width: 20%;
+}
+
+#logo {
+    width: 250px;
+    height: 250px;
+
+    position: fixed;
+}
+
+header nav {
+    position: fixed;
+    left: -30px;
+    top: 260px;
+}
+
+.pencils {
+    display: block;
+    width: 250px;
+    margin: -5px;
+    padding: 0;
+}
+
+.pencils:hover, .pencilLabels:hover {
+    cursor: pointer;
+}
+
+.pencilLabels {
+    font-family: 'blokletters-regular', sans-serif;
+    position: relative;
+    left: 70px;
+    top: 27px;
+    margin: 0;
+    padding: 0;
+}
