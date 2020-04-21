@@ -1,10 +1,46 @@
+@font-face {
+    font-family: 'beth-ellen';
+    src: url('../fonts/beth-ellen-2.0.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'blokletters-regular';
+    src: url('../fonts/blokletters-balpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'blokletters-bold';
+    src: url('../fonts/blokletters-viltstift.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'blokletters-thin';
+    src: url('../fonts/blokletters-potlood.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pepita-script';
+    src: url('../fonts/pepita_script_3_w01_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
 =============================================================================
 ------------------------------------------------------------------------GLOBAL
 =============================================================================
 */
-html {
-    background-color: black;
-    text-align: center;
-    color: white;
+body {
+    background-image: url("../img/starsky.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
