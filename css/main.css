@@ -54,6 +54,11 @@ header {
     width: 20%;
 }
 
+section {
+    width: 80%;
+    margin-left: 20%;
+}
+
 #logo {
     width: 250px;
     height: 250px;
@@ -85,4 +90,52 @@ header nav {
     top: 27px;
     margin: 0;
     padding: 0;
+}
+
+.blokletter_title {
+    font-family: 'blokletters-thin', sans-serif;
+    text-align: right;
+    color: white;
+    font-size: 4em;
+    font-weight: normal;
+    margin: 5px;
+    width: 80%;
+}
+
+.pepita_title {
+    font-family: 'pepita-script', sans-serif;
+    color: white;
+    font-size: 6em;
+    margin: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+div#introduction {
+    margin: 50px;
+    text-align: center;
+}
+
+div#introduction > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div#introduction p {
+    width: 65%;
+    margin-right: 40px;
+    margin-top: 0;
+    text-align: justify;
+}
+
+#socialMediaWrapper > * {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.handdrawn {
+    font-family: 'pepita-script', sans-serif;
+    font-size: 1.5em;
 }
