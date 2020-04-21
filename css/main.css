@@ -136,6 +136,18 @@ div#introduction p {
 }
 
 .handdrawn {
-    font-family: 'pepita-script', sans-serif;
+    font-family: 'beth-ellen', sans-serif;
     font-size: 1.5em;
+}
+
+.divider, #books {
+    text-align: center;
+}
+
+.divider img {
+    width: 80%;
+}
+
+.bookCover {
+    width: 40%;
 }
