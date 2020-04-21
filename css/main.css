@@ -112,7 +112,7 @@ header nav {
 }
 
 section#introduction {
-    margin: 50px;
+    margin: 50px 50px 20px;
     text-align: center;
 }
 
@@ -138,6 +138,9 @@ section#introduction p {
 .handdrawn {
     font-family: 'beth-ellen', sans-serif;
     font-size: 1.3em;
+    background-image: url("../img/draftBg.png");
+    padding-left: 10%;
+    padding-right: 2%;
 }
 
 .divider, #books {
@@ -150,4 +153,17 @@ section#introduction p {
 
 .bookCover {
     width: 40%;
+}
+
+#author aside {
+    text-align: right;
+}
+
+#author aside img {
+    width: 70%;
+}
+
+#author p {
+    display: inline-block;
+    width: 50%;
 }
