@@ -45,7 +45,7 @@ body {
     background-size: cover;
 }
 
-header, section {
+header, section#page {
     display: inline-block;
 }
 
@@ -54,7 +54,7 @@ header {
     width: 20%;
 }
 
-section {
+section#page {
     width: 80%;
     margin-left: 20%;
 }
@@ -111,17 +111,17 @@ header nav {
     font-weight: normal;
 }
 
-div#introduction {
+section#introduction {
     margin: 50px;
     text-align: center;
 }
 
-div#introduction > * {
+section#introduction > * {
     display: inline-block;
     vertical-align: top;
 }
 
-div#introduction p {
+section#introduction p {
     width: 65%;
     margin-right: 40px;
     margin-top: 0;
@@ -137,7 +137,7 @@ div#introduction p {
 
 .handdrawn {
     font-family: 'beth-ellen', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .divider, #books {
