@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'caroni';
+    src: url('../fonts/caroni-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'blokletters-regular';
     src: url('../fonts/blokletters-balpen.woff') format('woff');
     font-weight: normal;
@@ -113,12 +120,11 @@ header nav {
 
 
 .handdrawn {
-    font-family: 'beth-ellen', sans-serif;
-    font-size: 1.3em;
+    font-family: 'caroni', sans-serif;
+    font-size: 2.2em;
     background-image: url("../img/draftBg.png");
     background-repeat: repeat-y;
-    padding-left: 10%;
-    padding-right: 2%;
+    padding: 1% 2% 1% 10%;
 }
 
 .divider {
@@ -174,7 +180,7 @@ section#author div:nth-of-type(1) {
 }
 
 section#author aside img {
-    width: 90%;
+    width: 70%;
 }
 
 section#author p {
@@ -184,6 +190,20 @@ section#author p {
 
 .bookReference {
     font-family: 'blokletters-thin', sans-serif;
+    font-size: 0.7em;
     font-style: italic;
     font-weight: bold;
+    color: orangered;
+}
+
+.bookReference:hover {
+    text-decoration: underline;
+    color: orange;
+    cursor: pointer;
+}
+
+#support h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
 }
