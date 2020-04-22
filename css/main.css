@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'beth-ellen';
-    src: url('../fonts/beth-ellen-2.0.woff') format('woff');
+    font-family: 'lilly';
+    src: url('../fonts/lilly.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -79,6 +79,10 @@ header nav {
     top: 260px;
 }
 
+p {
+    text-align: justify;
+}
+
 .pencils {
     display: block;
     width: 250px;
@@ -137,7 +141,7 @@ header nav {
 
 section#introduction {
     margin: 50px 50px 20px;
-    text-align: center;
+    text-align: right;
 }
 
 section#introduction > * {
@@ -185,7 +189,6 @@ section#author aside img {
 
 section#author p {
     display: inline-block;
-    text-align: left;
 }
 
 .bookReference {
@@ -210,6 +213,7 @@ section#author p {
 
 #supportLinks {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 img.supportLink {
@@ -223,11 +227,28 @@ img.supportLink:hover {
     margin: 0;
 }
 
-#supportTitle {
-    font-family: 'pepita-script', sans-serif;
-    font-size: 4em;
+#supportTitle, #supportDescription {
+    font-family: 'lilly', sans-serif;
     color: antiquewhite;
+}
+
+#supportTitle {
     text-align: center;
+    font-size: 2.5em;
+    margin: auto;
+    border-radius: 30px 30px 0 0;
+    width: 40%;
+    background-color: #4a635e;
+}
+
+#supportDescription {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    border-radius: 10px 50px 10px 50px;
+    padding: 20px;
+    background-color: #374845;
 }
 
 div#credits {
@@ -235,4 +256,5 @@ div#credits {
     margin: auto;
     text-align: center;
     border: 1px dashed white;
+    color: white;
 }
