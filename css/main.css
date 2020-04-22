@@ -207,3 +207,32 @@ section#author p {
     font-weight: bold;
     margin: auto;
 }
+
+#supportLinks {
+    text-align: center;
+}
+
+img.supportLink {
+    height: 100px;
+    margin: 25px 12px 0 13px;
+}
+
+img.supportLink:hover {
+    height: 125px;
+    cursor: pointer;
+    margin: 0;
+}
+
+#supportTitle {
+    font-family: 'pepita-script', sans-serif;
+    font-size: 4em;
+    color: antiquewhite;
+    text-align: center;
+}
+
+div#credits {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 1px dashed white;
+}
