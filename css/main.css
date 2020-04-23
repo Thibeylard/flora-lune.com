@@ -171,8 +171,39 @@ section#books {
     width: 40%;
 }
 
-section#writings img {
-    position: relative;
+div.writingBar {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+div.writingBarBody {
+    flex: auto;
+    display: flex;
+    max-width: 900px;
+    height: 109px;
+    background-image: url("../img/bookmarkBody.png");
+}
+
+img.writingBarEnd {
+    flex: none;
+    height: 109px;
+}
+
+p.writingTitle {
+    flex: 8;
+    margin: 0;
+    font-size: 3em;
+}
+
+div.writingButton {
+    flex: 1;
+    text-align: center;
+    margin: 0 1% 0 1%;
+}
+
+div.writingButton img {
+    margin-top: 15px;
 }
 
 section#author aside {
@@ -227,7 +258,7 @@ img.supportLink:hover {
     margin: 0;
 }
 
-#supportTitle, #supportDescription {
+#supportTitle, #supportDescription, p.writingTitle, p.writingSummary {
     font-family: 'lilly', sans-serif;
     color: antiquewhite;
 }
