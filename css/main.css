@@ -126,7 +126,7 @@ p {
 .handdrawn {
     font-family: 'caroni', sans-serif;
     font-size: 2.2em;
-    background-image: url("../img/draftBg.png");
+    background-image: url("../img/bookPageBackground.png");
     background-repeat: repeat-y;
     padding: 1% 2% 1% 10%;
 }
@@ -196,6 +196,10 @@ p.writingTitle {
     font-size: 3em;
 }
 
+#detailsButton:hover {
+    cursor: pointer;
+}
+
 div.writingButton {
     flex: 1;
     text-align: center;
@@ -204,6 +208,21 @@ div.writingButton {
 
 div.writingButton img {
     margin-top: 15px;
+}
+
+p.writingSummary {
+    display: none;
+    position: relative;
+    bottom: 16px;
+    z-index: -1;
+    font-size: 1em;
+    margin-left: auto;
+    margin-top: auto;
+    border-radius: 0 0 30px 30px;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #4a635e;
+    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
 }
 
 section#author aside {
@@ -280,6 +299,7 @@ img.supportLink:hover {
     border-radius: 10px 50px 10px 50px;
     padding: 20px;
     background-color: #374845;
+    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
 }
 
 div#credits {
