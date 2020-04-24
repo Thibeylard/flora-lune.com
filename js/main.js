@@ -72,6 +72,34 @@ const supportLinkDescription = {
         "plu. Les retours constructifs sur l'oeuvre sont à la fois encourageants et formateurs.",
 };
 
+const supportLinkDestination = {
+    "tipeeeLink": "https://fr.tipeee.com/flora-lune",
+    "facebookLink": "https://www.facebook.com/FloraLune777",
+    "twitterLink": "https://twitter.com/lune_flora",
+    "wattpadLink": "https://www.wattpad.com/user/FloraLune",
+};
+
+
+$(".supportLink").hover(
+    function () {
+        selectSupportLink($(this));
+    },
+    function () {
+    }
+);
+
+$(".supportLink").click(function () {
+    socialMediaLink($(this));
+});
+
+$(".socialMediaIcon").click(function () {
+    socialMediaLink($(this));
+});
+
+function socialMediaLink(el) {
+    window.location.href = supportLinkDestination[el.attr("alt")];
+}
+
 function selectSupportLink(linkSelector) {
     linkSelector.css("height", "125px");
     linkSelector.css("margin", "0");
@@ -85,11 +113,3 @@ function selectSupportLink(linkSelector) {
     $("#supportTitle").html(supportLinkTitle[linkAlt]);
     $("#supportDescription").html(supportLinkDescription[linkAlt]);
 }
-
-$(".supportLink").hover(
-    function () {
-        selectSupportLink($(this));
-    },
-    function () {
-    }
-);
