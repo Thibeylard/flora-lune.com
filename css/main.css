@@ -90,13 +90,16 @@ p {
     padding: 0;
 }
 
-.pencils:hover, .pencilLabels:hover {
+.pencilLabels:hover {
+    color: orangered;
     cursor: pointer;
 }
 
 .pencilLabels {
     font-family: 'blokletters-regular', sans-serif;
     position: relative;
+    color: black;
+    text-decoration: none;
     left: 70px;
     top: 27px;
     margin: 0;
@@ -242,10 +245,9 @@ section#author p {
 }
 
 .bookReference {
-    font-family: 'blokletters-thin', sans-serif;
+    font-family: 'lilly', sans-serif;
     font-size: 0.7em;
     font-style: italic;
-    font-weight: bold;
     color: orangered;
 }
 
