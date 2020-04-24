@@ -70,17 +70,23 @@ const bookDescriptions = {
 */
 const writingIdList = [
     "mia",
-    "philomene"
+    "philomene",
+    "ameEgaree"
 ];
 
 const writingTitles = {
     "mia": "Mia",
-    "philomene": "Philomène"
+    "philomene": "Philomène",
+    "ameEgaree": "L'âme égarée"
 };
 
 const writingButtons = {
     "mia": {"wattpad": "https://www.wattpad.com/733474694-mia-4-septembre"},
-    "philomene": {"wattpad": "https://www.wattpad.com/614989477-philom%C3%A8ne-1"}
+    "philomene": {
+        "wattpad": "https://www.wattpad.com/614989477-philom%C3%A8ne-1",
+        "revedelignes": "https://revedelignes.com/titres/philomene-partie-1/"
+    },
+    "ameEgaree": {"revedelignes": "https://revedelignes.com/titres/lame-egaree/"}
 };
 
 const writingDescriptions = {
@@ -90,12 +96,14 @@ const writingDescriptions = {
         "Ou n'en avait jamais eu. Car si elle en avait eu, plus aucun élément aujourd'hui ne permettait " +
         "de prouver leur existence, comme si ils avaient été définitivement effacés de la surface de la Terre. " +
         "Philomène vivait donc là où vont les enfants qui n'ont pas de maison. Elle n'avait jamais été malheureuse là-bas, " +
-        "ni jamais vraiment heureuse, mais qu'importe : elle n'avait jamais connu que cet endroit."
+        "ni jamais vraiment heureuse, mais qu'importe : elle n'avait jamais connu que cet endroit.",
+    "ameEgaree": "L'histoire de deux soeurs fusionnelles, liées par un destin tragique."
 };
 
 let writingDescriptionVisible = {
     "mia": false,
-    "philomene": false
+    "philomene": false,
+    "ameEgaree": false
 };
 
 /*
@@ -127,9 +135,11 @@ function generateWritings() {
 
         writingButtonDictionnary = writingButtons[writingIdList[i]];
         if (writingButtonDictionnary.hasOwnProperty("wattpad"))
-            finalHtml += "<img class=\"writingButton\" src=\"img/wattpadButton.png\" alt=\"wattpadButton\" id='" + writingIdList[i] + "_wattpad'>";
+            finalHtml += "<img class=\"writingButton\" src=\"img/wattpadButton.png\" alt=\"wattpadButton\" id='" + writingIdList[i] + "_wattpad' title='Lire sur Wattpad'>";
+        if (writingButtonDictionnary.hasOwnProperty("revedelignes"))
+            finalHtml += "<img class=\"writingButton\" src=\"img/revedelignesButton.png\" alt=\"revedelignesButton\" id='" + writingIdList[i] + "_revedelignes' title='Lire sur Rêve de Lignes'>";
         if (writingButtonDictionnary.hasOwnProperty("youtube"))
-            finalHtml += "<img class=\"writingButton\" src=\"img/youtubeButton.png\" alt=\"youtubeButton\" id='" + writingIdList[i] + "_youtube'>";
+            finalHtml += "<img class=\"writingButton\" src=\"img/youtubeButton.png\" alt=\"youtubeButton\" id='" + writingIdList[i] + "_youtube' title='Voir sur Youtube'>";
 
         finalHtml +=
             "                    <img class=\"writingButton\" src=\"img/detailsButton.png\" alt=\"detailsButton\" id=\"" + writingIdList[i] + "_details\">" +
