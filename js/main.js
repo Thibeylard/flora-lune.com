@@ -44,7 +44,7 @@ const bookIdList = [
 ];
 
 const bookCovers = {
-    "adda": "../img/ADDA_cover.jpg"
+    "adda": "img/ADDA_cover.jpg"
 };
 
 const bookTitles = {
@@ -55,13 +55,13 @@ const bookButtons = {
     "adda": {"wattpad": "https://www.wattpad.com/325976668-adda-s1_e01-la-mort-corrompue-prologue"}
 };
 
-const bookDescription = {
-    "adda": "\"Les anges existent, et ils se font décimer en ce moment-même.\"\n" +
+const bookDescriptions = {
+    "adda": "\"Les anges existent, et ils se font décimer en ce moment-même.\"<br>" +
         "Telle est la phrase que lui dit un jour son ami Clément, et que Yuna n'aurait " +
         "jamais crue si tous deux n'avaient pas déjà trouvé la dépouille de l'un des leurs, " +
         "le dos barré d'une plaie en forme de croix. Depuis, et malgré ses efforts pour s'en " +
-        "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, depuis " +
-        "les missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
+        "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
+        "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
         "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... "
 };
 
@@ -83,7 +83,7 @@ const writingButtons = {
     "philomene": {"wattpad": "https://www.wattpad.com/614989477-philom%C3%A8ne-1"}
 };
 
-const writingDescription = {
+const writingDescriptions = {
     "mia": "Journal d'une étudiante de septembre à juin.",
     "philomene": "Philomène aurait du être aimée. En la nommant de la sorte, c'est sans doute ce que ses " +
         "parents souhaitaient pour elle. Oui, mais voilà, des parents, Philomène n'en avait plus. " +
@@ -104,8 +104,14 @@ let writingDescriptionVisible = {
 
 $(document).ready(function () {
     selectSupportLink($(".supportLink[alt=tipeeeLink]")); // Select Tipeee support Link as default.
+    //generateBooks();
     generateWritings();
+    setEventsOnDynamicElements();
 });
+
+function generateBooks() {
+    // TODO Make function on same dynamic model as generateWritings. Also insert slideshow for multiple books.
+}
 
 function generateWritings() {
     let writingSection = $("#writings");
@@ -130,12 +136,37 @@ function generateWritings() {
             "                </div>" +
             "            </div>" +
             "            <p class=\"writingSummary\" id=\"" + writingIdList[i] + "_summary\">" +
-            writingDescription[writingIdList[i]] +
+            writingDescriptions[writingIdList[i]] +
             "            </p>" +
             "        </div>"
     }
     writingSection.html(finalHtml);
 
+}
+
+function setEventsOnDynamicElements() {
+
+    /*
+    ------------------------------------------------------------------------ Book cover click event
+    */
+    let bookDetailsWrapper = $("#bookZoomWrapper");
+    let bookCover = $(".bookZoomLink");
+    let selectedBook = $("#bookCover");
+    let bookTitle = $("#bookTitle");
+    let bookSummary = $("#bookSummary");
+
+
+    bookCover.click(function () {
+        let bookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
+        bookDetailsWrapper.css("display", "flex");
+        selectedBook.attr("src", bookCovers[bookId]);
+        bookTitle.html(bookTitles[bookId]);
+        bookSummary.html(bookDescriptions[bookId]);
+    });
+
+    /*
+    ------------------------------------------------------------------------ Writings click event
+    */
     $(".writingButton").click(function () {
         let writingId = $(this).attr("id").split("_")[0];
         let buttonId = $(this).attr("id").split("_")[1];
@@ -149,9 +180,13 @@ function generateWritings() {
                 writingDescriptionVisible[writingId] = true;
             }
         } else {
-            console.log(writingId);
-            console.log(buttonId);
-            let selectedWritingButtons = writingButtons[writingId];
+            let selectedWritingButtons;
+
+            if (writingButtons.hasOwnProperty(writingId))
+                selectedWritingButtons = writingButtons[writingId];
+            else
+                selectedWritingButtons = bookButtons[writingId];
+
             window.location.href = selectedWritingButtons[buttonId];
         }
     });
@@ -171,29 +206,15 @@ $(".pencilLabels").click(function (e) { // Nav button click event : Scroll to ac
 });
 
 /*
------------------------------------------------------------------------- Book zoom events
+------------------------------------------------------------------------ Book static elements events
 */
-
-let bookDetailsWrapper = $("#bookZoomWrapper");
-let bookCover = $(".bookZoomLink");
-let selectedBook = $("#bookCover");
-let bookTitle = $("#bookTitle");
-let bookSummary = $("#bookSummary");
-
-
-bookCover.click(function () {
-    bookDetailsWrapper.css("display", "flex");
-    selectedBook.attr("src", $(this).attr("src"));
-    bookTitle.html("ADDA");
-    bookSummary.html("Test");
-});
 
 // Get the <span> element that closes the modal
 let span = $("#closeBookZoom");
 
 // When the user clicks on <span> (x), close the modal
 span.click(function () {
-    bookDetailsWrapper.css("display", "none");
+    $("#bookZoomWrapper").css("display", "none");
 });
 
 
