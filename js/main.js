@@ -33,6 +33,32 @@ function checkSectionIdScroll(sectionId) {
     console.log(sectionId);
 }
 
+// Book cover zoom
+
+// Get the modal
+var bookDetailsWrapper = $("#bookZoomWrapper");
+var bookCover = $(".bookZoomLink");
+var selectedBook = $("#bookCover");
+var bookTitle = $("#bookTitle");
+var bookSummary = $("#bookSummary");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+bookCover.click(function () {
+    bookDetailsWrapper.css("display", "flex");
+    selectedBook.attr("src", $(this).attr("src"));
+    bookTitle.html("ADDA");
+    bookSummary.html("Test");
+});
+
+// Get the <span> element that closes the modal
+var span = $("#closeBookZoom");
+
+// When the user clicks on <span> (x), close the modal
+span.click(function () {
+    bookDetailsWrapper.css("display", "none");
+});
+
 // Writings Details Buttons
 
 // TODO detailsDown would be an array of boolean usable by each writing.
