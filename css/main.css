@@ -181,7 +181,7 @@ section#introduction p {
 }
 
 .socialMediaIcon:hover {
-    filter: brightness(1.5);
+    filter: brightness(1.4);
     cursor: pointer;
 }
 
@@ -330,6 +330,14 @@ section#books {
 =============================================================================
 */
 
+.writing {
+    margin-bottom: 80px;
+}
+
+.writingSummary {
+    margin: 0 0 60px 0;
+}
+
 div.writingBar {
     display: flex;
     justify-content: flex-end;
@@ -357,8 +365,9 @@ span.writingTitle {
     margin: 0 0 15px 0;
 }
 
-#detailsButton:hover {
+.writingButton:hover {
     cursor: pointer;
+    filter: brightness(1.4);
 }
 
 section#writings img.writingButton {

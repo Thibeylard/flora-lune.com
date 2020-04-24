@@ -4,10 +4,6 @@
 =============================================================================
 */
 
-$(document).ready(function () {
-    selectSupportLink($(".supportLink[alt=tipeeeLink]")); // Select Tipeee support Link as default.
-});
-
 /*
 ------------------------------------------------------------------------ Support Links Data
 */
@@ -97,6 +93,70 @@ const writingDescription = {
         "ni jamais vraiment heureuse, mais qu'importe : elle n'avait jamais connu que cet endroit."
 };
 
+let writingDescriptionVisible = {
+    "mia": false,
+    "philomene": false
+};
+
+/*
+------------------------------------------------------------------------ Page html generation
+*/
+
+$(document).ready(function () {
+    selectSupportLink($(".supportLink[alt=tipeeeLink]")); // Select Tipeee support Link as default.
+    generateWritings();
+});
+
+function generateWritings() {
+    let writingSection = $("#writings");
+    let writingButtonDictionnary;
+    let finalHtml = writingSection.html();
+    for (let i = 0; i < writingIdList.length; i++) {
+        finalHtml +=
+            "<div class=\"writing\" id=\"" + writingIdList[i] + "_writing\">" +
+            "            <div class=\"writingBar\">" +
+            "                <img class=\"writingBarEnd\" src=\"img/bookmarkEnd.png\" alt=\"\">" +
+            "                <div class=\"writingBarBody\">" +
+            "                    <span class=\"writingTitle \">" + writingTitles[writingIdList[i]] + "</span>";
+
+        writingButtonDictionnary = writingButtons[writingIdList[i]];
+        if (writingButtonDictionnary.hasOwnProperty("wattpad"))
+            finalHtml += "<img class=\"writingButton\" src=\"img/wattpadButton.png\" alt=\"wattpadButton\" id='" + writingIdList[i] + "_wattpad'>";
+        if (writingButtonDictionnary.hasOwnProperty("youtube"))
+            finalHtml += "<img class=\"writingButton\" src=\"img/youtubeButton.png\" alt=\"youtubeButton\" id='" + writingIdList[i] + "_youtube'>";
+
+        finalHtml +=
+            "                    <img class=\"writingButton\" src=\"img/detailsButton.png\" alt=\"detailsButton\" id=\"" + writingIdList[i] + "_details\">" +
+            "                </div>" +
+            "            </div>" +
+            "            <p class=\"writingSummary\" id=\"" + writingIdList[i] + "_summary\">" +
+            writingDescription[writingIdList[i]] +
+            "            </p>" +
+            "        </div>"
+    }
+    writingSection.html(finalHtml);
+
+    $(".writingButton").click(function () {
+        let writingId = $(this).attr("id").split("_")[0];
+        let buttonId = $(this).attr("id").split("_")[1];
+
+        if (buttonId === "details") {
+            if (writingDescriptionVisible[writingId]) {
+                $(`\#${writingId}_summary`).slideUp();
+                writingDescriptionVisible[writingId] = false;
+            } else {
+                $(`\#${writingId}_summary`).slideDown();
+                writingDescriptionVisible[writingId] = true;
+            }
+        } else {
+            console.log(writingId);
+            console.log(buttonId);
+            let selectedWritingButtons = writingButtons[writingId];
+            window.location.href = selectedWritingButtons[buttonId];
+        }
+    });
+}
+
 /*
 =============================================================================
 ------------------------------------------------------------------------ EVENT HANDLERS
@@ -106,7 +166,6 @@ const writingDescription = {
 $(".pencilLabels").click(function (e) { // Nav button click event : Scroll to according section when clicked.
     e.preventDefault();
     let destinationId = $(this).attr("href");
-    console.log(destinationId);
     let destination = $(`section${destinationId}`);
     $('html,body').animate({scrollTop: destination.offset().top}, 'slow');
 });
@@ -115,11 +174,11 @@ $(".pencilLabels").click(function (e) { // Nav button click event : Scroll to ac
 ------------------------------------------------------------------------ Book zoom events
 */
 
-var bookDetailsWrapper = $("#bookZoomWrapper");
-var bookCover = $(".bookZoomLink");
-var selectedBook = $("#bookCover");
-var bookTitle = $("#bookTitle");
-var bookSummary = $("#bookSummary");
+let bookDetailsWrapper = $("#bookZoomWrapper");
+let bookCover = $(".bookZoomLink");
+let selectedBook = $("#bookCover");
+let bookTitle = $("#bookTitle");
+let bookSummary = $("#bookSummary");
 
 
 bookCover.click(function () {
@@ -130,25 +189,11 @@ bookCover.click(function () {
 });
 
 // Get the <span> element that closes the modal
-var span = $("#closeBookZoom");
+let span = $("#closeBookZoom");
 
 // When the user clicks on <span> (x), close the modal
 span.click(function () {
     bookDetailsWrapper.css("display", "none");
-});
-
-// Writings Details Buttons
-
-// TODO detailsDown would be an array of boolean usable by each writing.
-var detailsDown = false;
-$("#detailsButton").click(function () {
-    if (detailsDown) {
-        $(".writingSummary").slideUp();
-        detailsDown = false;
-    } else {
-        $(".writingSummary").slideDown();
-        detailsDown = true;
-    }
 });
 
 
