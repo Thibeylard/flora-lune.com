@@ -69,7 +69,6 @@ section#page {
 #logo {
     width: 250px;
     height: 250px;
-
     position: fixed;
 }
 
@@ -142,6 +141,21 @@ p {
     width: 80%;
 }
 
+
+div#credits {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 1px dashed white;
+    color: white;
+}
+
+/*
+=============================================================================
+------------------------------------------------------------------------INTRODUCTION SECTION
+=============================================================================
+*/
+
 section#introduction {
     margin: 50px 50px 20px;
     text-align: right;
@@ -171,6 +185,12 @@ section#introduction p {
     cursor: pointer;
 }
 
+/*
+=============================================================================
+------------------------------------------------------------------------BOOK SECTION
+=============================================================================
+*/
+
 section#books {
     text-align: center;
 }
@@ -182,7 +202,8 @@ section#books {
 }
 
 .bookZoomLink {
-    width: 40%;
+    width: 70%;
+    max-width: 500px;
     transition: 0.3s;
     margin-top: 0;
 }
@@ -195,142 +216,9 @@ section#books {
     margin-top: -10px;
 }
 
-div.writingBar {
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-
-div.writingBarBody {
-    flex: auto;
-    display: flex;
-    max-width: 900px;
-    height: 109px;
-    background-image: url("../img/bookmarkBody.png");
-}
-
-img.writingBarEnd {
-    flex: none;
-    height: 109px;
-}
-
-p.writingTitle {
-    flex: 8;
-    margin: 0;
-    font-size: 3em;
-}
-
-#detailsButton:hover {
-    cursor: pointer;
-}
-
-div.writingButton {
-    flex: 1;
-    text-align: center;
-    margin: 0 1% 0 1%;
-}
-
-div.writingButton img {
-    margin-top: 15px;
-}
-
-p.writingSummary {
-    display: none;
-    position: relative;
-    bottom: 16px;
-    z-index: -1;
-    font-size: 1em;
-    margin-left: auto;
-    margin-top: auto;
-    border-radius: 0 0 30px 30px;
-    max-width: 700px;
-    padding: 20px;
-    background-color: #4a635e;
-    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
-}
-
-section#author aside {
-    text-align: right;
-}
-
-section#author div:nth-of-type(1) {
-    text-align: right;
-}
-
-section#author aside img {
-    width: 70%;
-}
-
-section#author p {
-    display: inline-block;
-}
-
-.bookReference {
-    font-family: 'lilly', sans-serif;
-    font-size: 0.7em;
-    font-style: italic;
-    color: orangered;
-}
-
-.bookReference:hover {
-    text-decoration: underline;
-    color: orange;
-    cursor: pointer;
-}
-
-#support h1 {
-    text-align: center;
-    font-weight: bold;
-    margin: auto;
-}
-
-#supportLinks {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-img.supportLink {
-    height: 100px;
-    margin: 25px 12px 0 13px;
-}
-
-img.supportLink:hover {
-    cursor: pointer;
-}
-
-#supportTitle, #supportDescription, p.writingTitle, p.writingSummary {
-    font-family: 'lilly', sans-serif;
-    color: antiquewhite;
-}
-
-#supportTitle {
-    text-align: center;
-    font-size: 2.5em;
-    margin: auto;
-    border-radius: 30px 30px 0 0;
-    width: 40%;
-    background-color: #4a635e;
-}
-
-#supportDescription {
-    width: 80%;
-    margin: auto;
-    font-size: 1.3em;
-    margin-bottom: 40px;
-    border-radius: 10px 50px 10px 50px;
-    padding: 20px;
-    background-color: #374845;
-    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
-}
-
-div#credits {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    border: 1px dashed white;
-    color: white;
-}
-
+/*
+------------------------------------------------------------------------ Book Zoom
+*/
 
 #bookZoomWrapper {
     display: none; /* Hidden by default */
@@ -367,6 +255,25 @@ div#credits {
     width: 100%;
 }
 
+#bookTitle {
+    font-family: 'pepita-script', sans-serif;
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 0;
+}
+
+#bookButtonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bookButtonWrapper img {
+    flex: initial;
+    max-width: 60px;
+    margin: 0 10px 0 10px;
+}
+
 #bookSummary {
     font-family: 'lilly', sans-serif;
     margin: auto;
@@ -379,7 +286,7 @@ div#credits {
     height: 150px;
 }
 
-#bookCover, #bookSummary {
+#bookCover, #bookSummary, #bookTitle, #bookButtonWrapper img {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
@@ -393,7 +300,6 @@ div#credits {
     }
 }
 
-/* The Close Button */
 #closeBookZoom {
     position: absolute;
     top: 15px;
@@ -416,4 +322,150 @@ div#credits {
     .modal-content {
         width: 100%;
     }
+}
+
+/*
+=============================================================================
+------------------------------------------------------------------------ WRITINGS SECTION
+=============================================================================
+*/
+
+div.writingBar {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+div.writingBarBody {
+    flex: auto;
+    display: flex;
+    max-width: 900px;
+    height: 109px;
+    background-image: url("../img/bookmarkBody.png");
+}
+
+img.writingBarEnd {
+    flex: none;
+    height: 109px;
+}
+
+span.writingTitle {
+    flex: auto;
+    align-self: center;
+    justify-self: flex-end;
+    font-size: 3em;
+    margin: 0 0 15px 0;
+}
+
+#detailsButton:hover {
+    cursor: pointer;
+}
+
+section#writings img.writingButton {
+    flex: initial;
+    align-self: center;
+    justify-self: flex-end;
+    margin: 0 10px 10px 10px;
+    max-width: 60px;
+}
+
+p.writingSummary {
+    display: none;
+    position: relative;
+    bottom: 16px;
+    z-index: -1;
+    font-size: 1em;
+    margin-left: auto;
+    margin-top: auto;
+    border-radius: 0 0 30px 30px;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #4a635e;
+    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/*
+=============================================================================
+------------------------------------------------------------------------ AUTHOR SECTION
+=============================================================================
+*/
+
+section#author aside {
+    text-align: right;
+}
+
+section#author div:nth-of-type(1) {
+    text-align: right;
+}
+
+section#author aside img {
+    width: 70%;
+}
+
+section#author p {
+    display: inline-block;
+}
+
+.bookReference {
+    font-family: 'lilly', sans-serif;
+    font-size: 0.7em;
+    font-style: italic;
+    color: orangered;
+}
+
+.bookReference:hover {
+    text-decoration: underline;
+    color: orange;
+    cursor: pointer;
+}
+
+/*
+=============================================================================
+------------------------------------------------------------------------ SUPPORT SECTION
+=============================================================================
+*/
+
+#support h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+}
+
+#supportLinks {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img.supportLink {
+    height: 100px;
+    margin: 25px 12px 0 13px;
+}
+
+img.supportLink:hover {
+    cursor: pointer;
+}
+
+#supportTitle, #supportDescription, span.writingTitle, p.writingSummary {
+    font-family: 'lilly', sans-serif;
+    color: antiquewhite;
+}
+
+#supportTitle {
+    text-align: center;
+    font-size: 2.5em;
+    margin: auto;
+    border-radius: 30px 30px 0 0;
+    width: 40%;
+    background-color: #4a635e;
+}
+
+#supportDescription {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    border-radius: 10px 50px 10px 50px;
+    padding: 20px;
+    background-color: #374845;
+    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
 }
