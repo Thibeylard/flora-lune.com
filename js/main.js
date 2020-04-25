@@ -157,7 +157,7 @@ function generateWritings() {
 function setEventsOnDynamicElements() {
 
     /*
-    ------------------------------------------------------------------------ Book cover click event
+    ----------- Book cover click event
     */
     let bookDetailsWrapper = $("#bookZoomWrapper");
     let bookCover = $(".bookZoomLink");
@@ -175,7 +175,7 @@ function setEventsOnDynamicElements() {
     });
 
     /*
-    ------------------------------------------------------------------------ Writings click event
+    -------------- Writings click event
     */
     $(".writingButton").click(function () {
         let writingId = $(this).attr("id").split("_")[0];
@@ -208,7 +208,30 @@ function setEventsOnDynamicElements() {
 =============================================================================
 */
 
-$(".pencilLabels").click(function (e) { // Nav button click event : Scroll to according section when clicked.
+/*
+------------------------------------------------------------------------Header elements events
+*/
+let navPencils = $(".pencils");
+let pencilTexts = $(".pencilLabels");
+
+pencilTexts.hover(
+    function () {
+        $(this).animate({
+            left: "60px"
+        });
+        $(this).next(navPencils).animate({
+            margin: "-5px -5px -5px -20px"
+        })
+    },
+    function () {
+        $(this).animate({
+            left: "40px"
+        });
+        $(this).next(navPencils).animate({
+            margin: "-5px -5px -5px -40px"
+        })
+    });
+pencilTexts.click(function (e) { // Nav button click event : Scroll to according section when clicked.
     e.preventDefault();
     let destinationId = $(this).attr("href");
     let destination = $(`section${destinationId}`);
@@ -227,8 +250,11 @@ span.click(function () {
     $("#bookZoomWrapper").css("display", "none");
 });
 
-
-$(".supportLink").hover(
+/*
+------------------------------------------------------------------------Support elements events
+*/
+let supportLinks = $(".supportLink");
+supportLinks.hover(
     function () {
         selectSupportLink($(this));
     },
@@ -236,7 +262,7 @@ $(".supportLink").hover(
     }
 );
 
-$(".supportLink").click(function () {
+supportLinks.click(function () {
     socialMediaLink($(this));
 });
 
