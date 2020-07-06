@@ -11,7 +11,7 @@ const supportLinkTitle = {
     "tipeeeLink": "Tipeee",
     "facebookLink": "Facebook",
     "twitterLink": "Twitter",
-    "wattpadLink": "Wattpad",
+    "scribayLink": "Scribay",
 };
 
 const supportLinkDescription = {
@@ -24,16 +24,16 @@ const supportLinkDescription = {
     "twitterLink": "Twitter est le réseau social de partage par excellence. En suivant Flora, et en faisant suivre ses tweets, vous " +
         "contribuez grandement à lui donner de la visiblité sur internet. C'est rapide, sans frais, et cela donne toujours un bon coup " +
         "de pouce. N'hésitez pas !",
-    "wattpadLink": "Wattpad est une plate-forme sociale d'auteurs et de lecteurs. Si vous lisez une des oeuvres de Flora sur Wattpad, " +
-        "n'hésitez pas à lui laisser un vote, voire même des commentaires sur vos passages préférés ou au contraire sur ce qui vous a moins " +
-        "plu. Les retours constructifs sur l'oeuvre sont à la fois encourageants et formateurs.",
+    "scribayLink": "Scribay est un réseau social axé sur l'écriture et la lecture ! Inscription en un clic avec un compte Facebook, " +
+        "n'hésitez pas à lui laisser un j'aime, voire même des commentaires sur vos passages préférés ou au contraire sur ce qui vous a moins " +
+        "plu. Les retours constructifs sur l'oeuvre sont à la fois encourageants et formateurs."
 };
 
 const supportLinkDestination = {
     "tipeeeLink": "https://fr.tipeee.com/flora-lune",
     "facebookLink": "https://www.facebook.com/FloraLune777",
     "twitterLink": "https://twitter.com/lune_flora",
-    "wattpadLink": "https://www.wattpad.com/user/FloraLune",
+    "scribayLink": "https://www.scribay.com/author/2126495238/flora-lune",
 };
 
 /*
@@ -52,7 +52,10 @@ const bookTitles = {
 };
 
 const bookButtons = {
-    "adda": {"wattpad": "https://www.wattpad.com/325976668-adda-s1_e01-la-mort-corrompue-prologue"}
+    "adda": {
+        "scribay": "https://www.scribay.com/text/1166040301/adda---saison-1---les-anges-dechus",
+        "wattpad": "https://www.wattpad.com/325976668-adda-s1_e01-la-mort-corrompue-prologue"
+    }
 };
 
 const bookDescriptions = {
@@ -81,12 +84,18 @@ const writingTitles = {
 };
 
 const writingButtons = {
-    "mia": {"wattpad": "https://www.wattpad.com/733474694-mia-4-septembre"},
+    "mia": {
+        "scribay": "https://www.scribay.com/text/1720137389/mia",
+        "wattpad": "https://www.wattpad.com/733474694-mia-4-septembre"
+    },
     "philomene": {
         "wattpad": "https://www.wattpad.com/614989477-philom%C3%A8ne-1",
         "revedelignes": "https://revedelignes.com/titres/philomene-partie-1/"
     },
-    "ameEgaree": {"revedelignes": "https://revedelignes.com/titres/lame-egaree/"}
+    "ameEgaree": {
+        "scribay": "https://www.scribay.com/text/808338942/l-ame-egaree",
+        "revedelignes": "https://revedelignes.com/titres/lame-egaree/"
+    }
 };
 
 const writingDescriptions = {
@@ -134,6 +143,8 @@ function generateWritings() {
             "                    <span class=\"writingTitle \">" + writingTitles[writingIdList[i]] + "</span>";
 
         writingButtonDictionnary = writingButtons[writingIdList[i]];
+        if (writingButtonDictionnary.hasOwnProperty("scribay"))
+            finalHtml += "<img class=\"writingButton\" src=\"img/scribayButton.png\" alt=\"scribayButton\" id='" + writingIdList[i] + "_scribay' title='Lire sur Scribay'>";
         if (writingButtonDictionnary.hasOwnProperty("wattpad"))
             finalHtml += "<img class=\"writingButton\" src=\"img/wattpadButton.png\" alt=\"wattpadButton\" id='" + writingIdList[i] + "_wattpad' title='Lire sur Wattpad'>";
         if (writingButtonDictionnary.hasOwnProperty("revedelignes"))
