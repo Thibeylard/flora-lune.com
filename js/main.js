@@ -70,10 +70,10 @@ const bookDescriptions = {
 
 const bookCharacters = {
     "adda": {
-        "yuna": "",
-        "heath": "",
-        "tommy": "",
-        "clement": "",
+        "yuna": "C'est Yuna",
+        "heath": "C'est Heath",
+        "tommy": "C'est Tommy",
+        "clement": "C'est Clément",
     }
 }
 
@@ -187,19 +187,31 @@ function setEventsOnDynamicElements() {
     /*
     ----------- Book cover click event
     */
-    let bookDetailsWrapper = $("#bookZoomWrapper");
-    let bookCover = $(".bookZoomLink");
-    let selectedBook = $("#bookCover");
-    let bookTitle = $("#bookTitle");
-    let bookSummary = $("#bookSummary");
+    let bookDetailsWrapperTag = $("#bookZoomWrapper");
+    let bookCoverTag = $(".bookZoomLink");
+    let selectedBookTag = $("#bookCover");
+    let bookTitleTag = $("#bookTitle");
+    let bookSummaryTag = $("#bookSummary");
+    let bookCharactersTag = $("#bookCharacters");
 
 
-    bookCover.click(function () {
+    bookCoverTag.click(function () {
         let bookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
-        bookDetailsWrapper.css("display", "flex");
-        selectedBook.attr("src", bookCovers[bookId]);
-        bookTitle.html(bookTitles[bookId]);
-        bookSummary.html(bookDescriptions[bookId]);
+        bookDetailsWrapperTag.css("display", "flex");
+        selectedBookTag.attr("src", bookCovers[bookId]);
+        bookTitleTag.html(bookTitles[bookId]);
+        bookSummaryTag.html(bookDescriptions[bookId]);
+        let selectedBookCharacters = bookCharacters[bookId];
+        let htmlCharacters = "";
+        for (let characterKey of Object.keys(selectedBookCharacters)) {
+            htmlCharacters += "<a href='#' class='bookCharacterLink' id='" + characterKey + "_" + bookId + "_link'>";
+            htmlCharacters += "@" + characterKey;
+            htmlCharacters += "</a> ";
+        }
+
+        console.log(htmlCharacters);
+        bookCharactersTag.html(htmlCharacters
+        );
     });
 
     /*
@@ -259,6 +271,7 @@ pencilTexts.hover(
             margin: "-5px -5px -5px -40px"
         })
     });
+
 pencilTexts.click(function (e) { // Nav button click event : Scroll to according section when clicked.
     e.preventDefault();
     let destinationId = $(this).attr("href");
