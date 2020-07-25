@@ -59,13 +59,9 @@ const bookButtons = {
 };
 
 const bookDescriptions = {
-    "adda": "\"Les anges existent, et ils se font décimer en ce moment-même.\"<br>" +
-        "Telle est la phrase que lui dit un jour son ami Clément, et que Yuna n'aurait " +
-        "jamais crue si tous deux n'avaient pas déjà trouvé la dépouille de l'un des leurs, " +
-        "le dos barré d'une plaie en forme de croix. Depuis, et malgré ses efforts pour s'en " +
-        "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
-        "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
-        "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... "
+    "adda": "Bannis et emprisonnés pendant des siècles par les anges, les nephilims se vengent et pourchassent leurs " +
+        "bourreaux jusqu'en Ikkai, le monde des humains. Et, lorsqu'elle trouve le cadavre de l'un d'entre eux amputé " +
+        "de ses ailes, Yuna ignore encore qu'elle s'apprête à prendre part à une guerre à laquelle elle n'est pas étrangère... "
 };
 
 /*
