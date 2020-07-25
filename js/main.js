@@ -68,6 +68,15 @@ const bookDescriptions = {
         "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... "
 };
 
+const bookCharacters = {
+    "adda": {
+        "yuna": "",
+        "heath": "",
+        "tommy": "",
+        "clement": "",
+    }
+}
+
 /*
 ------------------------------------------------------------------------ Writings Data
 */
