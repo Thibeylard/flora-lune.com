@@ -72,18 +72,27 @@ const bookDescriptions = {
 ------------------------------------------------------------------------ Writings Data
 */
 const writingIdList = [
+    "ameEgaree",
+    "balTulipe",
     "mia",
-    "philomene",
-    "ameEgaree"
+    "philomene"
 ];
 
 const writingTitles = {
+    "ameEgaree": "L'âme égarée",
+    "balTulipe": "Le bal des Tulipe",
     "mia": "Mia",
-    "philomene": "Philomène",
-    "ameEgaree": "L'âme égarée"
+    "philomene": "Philomène"
 };
 
 const writingButtons = {
+    "ameEgaree": {
+        "scribay": "https://www.scribay.com/text/808338942/l-ame-egaree",
+        "revedelignes": "https://revedelignes.com/titres/lame-egaree/"
+    },
+    "balTulipe": {
+        "scribay": "https://www.scribay.com/text/1954759394/le-bal-des-tulipe"
+    },
     "mia": {
         "scribay": "https://www.scribay.com/text/1720137389/mia",
         "wattpad": "https://www.wattpad.com/733474694-mia-4-septembre"
@@ -91,28 +100,27 @@ const writingButtons = {
     "philomene": {
         "wattpad": "https://www.wattpad.com/614989477-philom%C3%A8ne-1",
         "revedelignes": "https://revedelignes.com/titres/philomene-partie-1/"
-    },
-    "ameEgaree": {
-        "scribay": "https://www.scribay.com/text/808338942/l-ame-egaree",
-        "revedelignes": "https://revedelignes.com/titres/lame-egaree/"
     }
 };
 
 const writingDescriptions = {
+    "ameEgaree": "Brutalement, sans crier gare, la mort sépare un beau jour Riley de sa sœur jumelle, Miley. Injustice… ou juste retour des choses ?",
+    "balTulipe": "\"Cependant, un matin, il retrouva ses protégées mais hélas, mille fois hélas, aucune d'entre elles ne l'accueillit. Tête baissées, les pétales négligées, les fleurs dormaient à poing fermé.\"\n" +
+        "Extrait de Siméon le Papillon, d'Antoon Krings, dont cette histoire se veut la réécriture.",
     "mia": "Journal d'une étudiante de septembre à juin.",
     "philomene": "Philomène aurait du être aimée. En la nommant de la sorte, c'est sans doute ce que ses " +
         "parents souhaitaient pour elle. Oui, mais voilà, des parents, Philomène n'en avait plus. " +
         "Ou n'en avait jamais eu. Car si elle en avait eu, plus aucun élément aujourd'hui ne permettait " +
         "de prouver leur existence, comme si ils avaient été définitivement effacés de la surface de la Terre. " +
         "Philomène vivait donc là où vont les enfants qui n'ont pas de maison. Elle n'avait jamais été malheureuse là-bas, " +
-        "ni jamais vraiment heureuse, mais qu'importe : elle n'avait jamais connu que cet endroit.",
-    "ameEgaree": "L'histoire de deux soeurs fusionnelles, liées par un destin tragique."
+        "ni jamais vraiment heureuse, mais qu'importe : elle n'avait jamais connu que cet endroit."
 };
 
 let writingDescriptionVisible = {
+    "ameEgaree": false,
+    "balTulipe": false,
     "mia": false,
-    "philomene": false,
-    "ameEgaree": false
+    "philomene": false
 };
 
 /*
