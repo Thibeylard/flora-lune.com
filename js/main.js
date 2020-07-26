@@ -77,7 +77,17 @@ const bookInfos = {
             "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
             "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
             "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... ",
-        "yuna": "C'est Yuna",
+        "yuna": "\n" +
+            "\n" +
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc sit amet mi suscipit dapibus. Vestibulum quis nulla vel nisl scelerisque dapibus. Nulla eu consequat magna, vitae dapibus neque. Phasellus a felis blandit, tempus felis sed, suscipit purus. Vivamus ut elementum lectus. Suspendisse mollis efficitur congue. Quisque dapibus purus eget est eleifend, sed cursus quam ullamcorper. Mauris laoreet diam quis urna luctus, a aliquet velit ultrices. Integer tempor facilisis leo, nec commodo ex blandit ut.\n" +
+            "\n" +
+            "Fusce lorem risus, auctor nec malesuada vel, interdum eu libero. In hac habitasse platea dictumst. In nec purus metus. Etiam id eleifend augue. In eleifend, quam ac molestie efficitur, ex nunc ullamcorper sapien, in sodales tortor enim eu ligula. Proin justo nisi, pulvinar et augue non, convallis porta enim. Fusce nibh erat, mattis quis dapibus vitae, facilisis sit amet orci. Nunc id consequat neque, vitae euismod lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eget eros convallis, luctus nisi quis, placerat magna. Cras porta viverra placerat. Aliquam erat volutpat. Curabitur eu nunc in nunc aliquet condimentum. In quis aliquam purus. Etiam condimentum rhoncus dui, nec blandit odio faucibus id.\n" +
+            "\n" +
+            "Aliquam quam tortor, sodales id pellentesque nec, suscipit vel sem. Aenean massa diam, facilisis ac suscipit sit amet, ornare at lacus. Integer rhoncus nunc a aliquet posuere. Phasellus placerat id metus eget imperdiet. Mauris fermentum erat ac aliquet fringilla. Fusce ut velit id nisi laoreet volutpat nec a libero. Cras vitae est massa. Nam ultrices congue elit sit amet tempor. Sed metus dui, ornare a tempor vitae, lacinia nec purus. Fusce id nisi ac urna posuere sollicitudin. Sed velit massa, tristique ac cursus aliquet, congue sit amet massa.\n" +
+            "\n" +
+            "Morbi in tempus purus, nec egestas neque. Sed id porta tortor, ut commodo elit. Suspendisse sed est justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam dignissim, nulla vitae aliquam sagittis, massa lacus ornare orci, non suscipit nunc metus ac nunc. Morbi sapien tortor, iaculis vitae orci vel, pulvinar tempus nunc. Aliquam venenatis tincidunt tincidunt. Morbi at elit volutpat, rhoncus nibh at, pretium nunc.\n" +
+            "\n" +
+            "Phasellus ullamcorper lacus tortor, ac fringilla neque dignissim rhoncus. Suspendisse eleifend mauris ac elit sodales tincidunt. Nullam consectetur ante vitae libero pharetra, a bibendum nisi maximus. Duis sodales luctus ex. Fusce sit amet rutrum orci. Donec porta elementum sapien, tempus interdum tellus efficitur ut. Nulla vitae dapibus nunc, et porta ante. Sed posuere malesuada magna tempor mollis. Duis et magna ut est posuere aliquam. Integer sodales neque ut ex eleifend, at tristique lacus interdum. Curabitur vehicula tristique nunc posuere condimentum. Aliquam varius rhoncus vestibulum. Duis sit amet dapibus neque. Etiam luctus scelerisque magna at sagittis. Donec faucibus ultrices nibh, eu varius lacus vestibulum eget. ",
         "heath": "C'est Heath",
         "tommy": "C'est Tommy",
         "clement": "C'est Clément",
@@ -200,40 +210,44 @@ function setEventsOnDynamicElements() {
     let bookTitleTag = $("#bookTitle");
     let bookSummaryTag = $("#bookSummary");
     let bookInfosTag = $("#bookInfosLinks");
-    let bookInfoLinkTag = $(".bookInfoLink");
 
     let currentBookId;
 
-    bookInfoLinkTag.click(function () {
-        let bookInfoId = $(this).attr("id");
-
+    // This event handler form support dynamic elements
+    $("body").on("click", ".bookInfoLink", function (e) {
+        e.preventDefault();
+        let infoId = $(this).attr("id");
         // Reset class of all other links
-        let otherLinks = $(`.bookInfoLink[id!=${bookInfoId}]`);
+        let otherLinks = $(`.bookInfoLink[id!=${infoId}]`);
         $(otherLinks).attr("class", "bookInfoLink");
 
-        bookInfoId = $(this).attr("id").split("_")[0];
+        infoId = $(this).attr("id").split("_")[0];
         let selectedBookInfos = bookInfos[currentBookId];
-        bookSummaryTag.html(bookInfos[bookInfoId]);
+        bookSummaryTag.html(selectedBookInfos[infoId]);
         $(this).attr("class", "bookInfoLinkSelected bookInfoLink");
     });
 
 
-    bookCoverTag.click(function (e) {
-        e.preventDefault();
+    bookCoverTag.click(function () {
         currentBookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
+        console.log(currentBookId);
         bookDetailsWrapperTag.css("display", "flex");
         selectedBookTag.attr("src", bookCovers[currentBookId]);
         bookTitleTag.html(bookTitles[currentBookId]);
         let selectedBookInfos = bookInfos[currentBookId];
         let htmlInfos = "";
+        let infoId = "";
         for (let key of Object.keys(selectedBookInfos)) {
-            htmlInfos += "<a href='#' class='bookInfoLink' id='" + key + "_infoLink'>";
+            infoId = key + "_infoLink";
+            if (key === "synopsis") {
+                htmlInfos += "<a href='#' class='bookInfoLink bookInfoLinkSelected' id='" + infoId + "'>";
+            } else {
+                htmlInfos += "<a href='#' class='bookInfoLink' id='" + infoId + "'>";
+            }
             htmlInfos += "@" + key;
             htmlInfos += "</a> ";
         }
-        bookSummaryTag.html(selectedBookInfos[0]);
-        bookInfoLinkTag = $(".bookInfoLink");
-        console.log(htmlInfos);
+        bookSummaryTag.html(selectedBookInfos['synopsis']);
         bookInfosTag.html(htmlInfos
         );
     });
