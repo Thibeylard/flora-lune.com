@@ -15,18 +15,18 @@ const supportLinkTitle = {
 };
 
 const supportLinkDescription = {
-    "tipeeeLink": "Tipee est une plate-forme de financement participatif ! Si vous aimez les oeuvres signées Flora Lune, " +
-        "                vous pouvez lui laisser des \"pourboires\" mensuels, et ainsi avoir accès à des contenus exclusifs ! " +
-        "                Vous trouverez plus de détails sur sa page dédiée.",
-    "facebookLink": "En aimant la page \"Flora Lune\", vous lui offrez une plus grande visibilité. Il est également possible " +
-        "de partager avec vos proches son contenu, et donc de la faire connaître plus facilement. Bien que ce soit une aide moins " +
-        "concrète qu'avec Tipeee, partager le contenu d'un artiste est primordial. C'est aussi gratuit !",
-    "twitterLink": "Twitter est le réseau social de partage par excellence. En suivant Flora, et en faisant suivre ses tweets, vous " +
-        "contribuez grandement à lui donner de la visiblité sur internet. C'est rapide, sans frais, et cela donne toujours un bon coup " +
-        "de pouce. N'hésitez pas !",
+    "tipeeeLink": "Tipee est une plate-forme de financement participatif ! Si vous aimez ce que je crée, " +
+        "vous pouvez me laisser des \"pourboires\" mensuels, et ainsi avoir accès à des contenus exclusifs ! " +
+        "Vous trouverez plus de détails sur ma page dédiée.",
+    "facebookLink": "En aimant la page \"Flora Lune\", vous m'offrez une plus grande visibilité. Il est également possible " +
+        "de partager avec vos proches son contenu, et donc de faire connaître plus facilement mon travail. Bien que ce soit une aide moins " +
+        "concrète qu'avec Tipeee, le partage de contenu est primordial. C'est aussi gratuit !",
+    "twitterLink": "Twitter est le réseau social de partage par excellence. En me suivant, et en faisant suivre mes tweets, vous " +
+        "contribuez grandement à me donner de la visiblité sur internet. C'est rapide, sans frais, et cela donne toujours un bon coup " +
+        "de pouce. Je vous en serais très reconnaissante !",
     "scribayLink": "Scribay est un réseau social axé sur l'écriture et la lecture ! Inscription en un clic avec un compte Facebook, " +
-        "n'hésitez pas à lui laisser un j'aime, voire même des commentaires sur vos passages préférés ou au contraire sur ce qui vous a moins " +
-        "plu. Les retours constructifs sur l'oeuvre sont à la fois encourageants et formateurs."
+        "n'hésitez pas à me laisser un petit j'aime, voire même des commentaires sur vos passages préférés ou au contraire sur ce qui vous a moins " +
+        "plu. Les retours constructifs sur l'oeuvre sont à la fois encourageants et formateurs pour moi."
 };
 
 const supportLinkDestination = {
@@ -58,16 +58,6 @@ const bookButtons = {
     }
 };
 
-const bookDescriptions = {
-    "adda": "\"Les anges existent, et ils se font décimer en ce moment-même.\"<br>" +
-        "Telle est la phrase que lui dit un jour son ami Clément, et que Yuna n'aurait " +
-        "jamais crue si tous deux n'avaient pas déjà trouvé la dépouille de l'un des leurs, " +
-        "le dos barré d'une plaie en forme de croix. Depuis, et malgré ses efforts pour s'en " +
-        "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
-        "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
-        "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... "
-};
-
 const bookInfos = {
     "adda": {
         "synopsis": "\"Les anges existent, et ils se font décimer en ce moment-même.\"<br>" +
@@ -77,20 +67,25 @@ const bookInfos = {
             "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
             "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
             "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... ",
-        "yuna": "\n" +
-            "\n" +
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc sit amet mi suscipit dapibus. Vestibulum quis nulla vel nisl scelerisque dapibus. Nulla eu consequat magna, vitae dapibus neque. Phasellus a felis blandit, tempus felis sed, suscipit purus. Vivamus ut elementum lectus. Suspendisse mollis efficitur congue. Quisque dapibus purus eget est eleifend, sed cursus quam ullamcorper. Mauris laoreet diam quis urna luctus, a aliquet velit ultrices. Integer tempor facilisis leo, nec commodo ex blandit ut.\n" +
-            "\n" +
-            "Fusce lorem risus, auctor nec malesuada vel, interdum eu libero. In hac habitasse platea dictumst. In nec purus metus. Etiam id eleifend augue. In eleifend, quam ac molestie efficitur, ex nunc ullamcorper sapien, in sodales tortor enim eu ligula. Proin justo nisi, pulvinar et augue non, convallis porta enim. Fusce nibh erat, mattis quis dapibus vitae, facilisis sit amet orci. Nunc id consequat neque, vitae euismod lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eget eros convallis, luctus nisi quis, placerat magna. Cras porta viverra placerat. Aliquam erat volutpat. Curabitur eu nunc in nunc aliquet condimentum. In quis aliquam purus. Etiam condimentum rhoncus dui, nec blandit odio faucibus id.\n" +
-            "\n" +
-            "Aliquam quam tortor, sodales id pellentesque nec, suscipit vel sem. Aenean massa diam, facilisis ac suscipit sit amet, ornare at lacus. Integer rhoncus nunc a aliquet posuere. Phasellus placerat id metus eget imperdiet. Mauris fermentum erat ac aliquet fringilla. Fusce ut velit id nisi laoreet volutpat nec a libero. Cras vitae est massa. Nam ultrices congue elit sit amet tempor. Sed metus dui, ornare a tempor vitae, lacinia nec purus. Fusce id nisi ac urna posuere sollicitudin. Sed velit massa, tristique ac cursus aliquet, congue sit amet massa.\n" +
-            "\n" +
-            "Morbi in tempus purus, nec egestas neque. Sed id porta tortor, ut commodo elit. Suspendisse sed est justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam dignissim, nulla vitae aliquam sagittis, massa lacus ornare orci, non suscipit nunc metus ac nunc. Morbi sapien tortor, iaculis vitae orci vel, pulvinar tempus nunc. Aliquam venenatis tincidunt tincidunt. Morbi at elit volutpat, rhoncus nibh at, pretium nunc.\n" +
-            "\n" +
-            "Phasellus ullamcorper lacus tortor, ac fringilla neque dignissim rhoncus. Suspendisse eleifend mauris ac elit sodales tincidunt. Nullam consectetur ante vitae libero pharetra, a bibendum nisi maximus. Duis sodales luctus ex. Fusce sit amet rutrum orci. Donec porta elementum sapien, tempus interdum tellus efficitur ut. Nulla vitae dapibus nunc, et porta ante. Sed posuere malesuada magna tempor mollis. Duis et magna ut est posuere aliquam. Integer sodales neque ut ex eleifend, at tristique lacus interdum. Curabitur vehicula tristique nunc posuere condimentum. Aliquam varius rhoncus vestibulum. Duis sit amet dapibus neque. Etiam luctus scelerisque magna at sagittis. Donec faucibus ultrices nibh, eu varius lacus vestibulum eget. ",
-        "heath": "C'est Heath",
-        "tommy": "C'est Tommy",
-        "clement": "C'est Clément",
+        "heath": "Insupportable bourreau des coeurs, manipulateur invétéré, Heath est pourtant l'un, si ce n'est LE personnage central d'ADDA." +
+            "<br/>" +
+            "Officiellement en dernière année de magie thérapeutique et défensive, Heath maîtrise également la magie élémentaire, la magie minérale, le combat à mains nues et la quasi-totalité des armes existantes, sa préférée étant le pistolet." +
+            "<br/>" +
+            "Un \"mage un peu cheaté\" comme je l'ai parfois entendu appeler... Oui, et non. En réalité, rien ne me fait plus plaisir que de confronter Heath à ceux qui le surpassent, car c'est là qu'il révèle sa vraie valeur." +
+            "<br/>" +
+            "En plus d'être extrêmement polyvalent, il est d'une intelligence rare... ainsi que d'une arrogance à laquelle il peut imputer ses plus lourdes erreurs de jugement.\n" +
+            "<br/>" +
+            "Véritable bourreau des coeurs, Heath ne quitte jamais un endroit sans avoir séduit une femme, ou un homme. Frivole, oui et non. S'il aime avoir des aventures pour le simple plaisir de la séduction, il est capable d'aimer plusieurs personnes à la fois avec la même force." +
+            "<br/>" +
+            "Mais, le vrai mystère de ce personnage - pour moi y compris - réside dans son imprévisibilité. Changeant, instable, il est capable de l'amour le plus sincère et de la haine la plus profonde, d'une bienveillance pure comme de la cruauté proche de la folie." +
+            "<br/>" +
+            "En somme, Heath représente un véritable défi pour moi, et plus ses défauts m'apparaissent, plus son évolution devient intéressante.",
+        "tommy": "Tommy est un médecin de 33 ans, qui a fait ses études à la très réputée académie de Valcendré, et c'est aujourd'hui le meilleur (et seul) médecin de Valroux, exerçant en association avec Eunice, son épouse, pharmacienne." +
+            "Tommy est donc ce qu'on peut appeler un érudit, mais surtout un homme très intelligent, droit, sévère, et intransigeant." +
+            "<br/>" +
+            "Il a recueilli Yuna lorsqu'elle avait 10 ans, et, malgré un difficile apprivoisement mutuel, l'a soignée, l'a instruite, et lui a confié ses tout premiers travaux sur les terres de Nads. Aujourd'hui encore, même si Yuna voyage de plus en plus longtemps et de plus en plus loin, même si Tommy et Eunice travaillent à fonder leur propre foyer, leur demeure reste son havre, son point de chute." +
+            "<br/>" +
+            "Pour ceux qui souhaitent en savoir un peu plus sur ce personnage, je vous suggère d'aller lire \"L'enfant de Valmort\", le spin-off qui narre leur première rencontre."
     }
 };
 
@@ -225,6 +220,8 @@ function setEventsOnDynamicElements() {
         let selectedBookInfos = bookInfos[currentBookId];
         bookSummaryTag.html(selectedBookInfos[infoId]);
         $(this).attr("class", "bookInfoLinkSelected bookInfoLink");
+
+        bookSummaryTag.scrollTop(0);
     });
 
 
