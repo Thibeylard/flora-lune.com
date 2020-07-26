@@ -60,13 +60,9 @@ const bookButtons = {
 
 const bookInfos = {
     "adda": {
-        "synopsis": "\"Les anges existent, et ils se font décimer en ce moment-même.\"<br>" +
-            "Telle est la phrase que lui dit un jour son ami Clément, et que Yuna n'aurait " +
-            "jamais crue si tous deux n'avaient pas déjà trouvé la dépouille de l'un des leurs, " +
-            "le dos barré d'une plaie en forme de croix. Depuis, et malgré ses efforts pour s'en " +
-            "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
-            "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
-            "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... ",
+        "synopsis": "Bannis et emprisonnés pendant des siècles par les anges, les nephilims se vengent et pourchassent leurs " +
+            "bourreaux jusqu'en Ikkai, le monde des humains. Et, lorsqu'elle trouve le cadavre de l'un d'entre eux amputé " +
+            "de ses ailes, Yuna ignore encore qu'elle s'apprête à prendre part à une guerre à laquelle elle n'est pas étrangère... ",
         "heath": "Insupportable bourreau des coeurs, manipulateur invétéré, Heath est pourtant l'un, si ce n'est LE personnage central d'ADDA." +
             "<br/>" +
             "Officiellement en dernière année de magie thérapeutique et défensive, Heath maîtrise également la magie élémentaire, la magie minérale, le combat à mains nues et la quasi-totalité des armes existantes, sa préférée étant le pistolet." +
