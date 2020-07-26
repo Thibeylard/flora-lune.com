@@ -144,6 +144,7 @@ p {
 
 div#credits {
     width: 50%;
+    font-size: 0.7em;
     margin: auto;
     text-align: center;
     border: 1px dashed white;
@@ -289,18 +290,22 @@ section#books {
     height: 55%;
 }
 
-#bookCharacters {
+#bookInfosLinks {
     font-family: 'lilly', sans-serif;
     text-align: center;
     color: #ccc;
 }
 
-.bookCharacterLink, .bookCharacterLink:visited {
+.bookInfoLink, .bookInfoLink:visited {
     color: #ccc;
     text-decoration: none;
 }
 
-.bookCharacterLink:hover {
+.bookInfoLinkSelected {
+    color: #cc243c;
+}
+
+.bookInfoLink:hover {
     color: orange;
 }
 

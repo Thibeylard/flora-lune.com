@@ -68,14 +68,21 @@ const bookDescriptions = {
         "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... "
 };
 
-const bookCharacters = {
+const bookInfos = {
     "adda": {
+        "synopsis": "\"Les anges existent, et ils se font décimer en ce moment-même.\"<br>" +
+            "Telle est la phrase que lui dit un jour son ami Clément, et que Yuna n'aurait " +
+            "jamais crue si tous deux n'avaient pas déjà trouvé la dépouille de l'un des leurs, " +
+            "le dos barré d'une plaie en forme de croix. Depuis, et malgré ses efforts pour s'en " +
+            "éloigner, il semble que tout la ramène vers les victimes et leurs bourreaux, des " +
+            "missions qui lui sont confiées jusqu'à sa rencontre avec Heath, un mage en fin de " +
+            "formation qui paraît en savoir bien plus que ce qu'on lui a enseigné à l'école... ",
         "yuna": "C'est Yuna",
         "heath": "C'est Heath",
         "tommy": "C'est Tommy",
         "clement": "C'est Clément",
     }
-}
+};
 
 /*
 ------------------------------------------------------------------------ Writings Data
@@ -192,25 +199,42 @@ function setEventsOnDynamicElements() {
     let selectedBookTag = $("#bookCover");
     let bookTitleTag = $("#bookTitle");
     let bookSummaryTag = $("#bookSummary");
-    let bookCharactersTag = $("#bookCharacters");
+    let bookInfosTag = $("#bookInfosLinks");
+    let bookInfoLinkTag = $(".bookInfoLink");
+
+    let currentBookId;
+
+    bookInfoLinkTag.click(function () {
+        let bookInfoId = $(this).attr("id");
+
+        // Reset class of all other links
+        let otherLinks = $(`.bookInfoLink[id!=${bookInfoId}]`);
+        $(otherLinks).attr("class", "bookInfoLink");
+
+        bookInfoId = $(this).attr("id").split("_")[0];
+        let selectedBookInfos = bookInfos[currentBookId];
+        bookSummaryTag.html(bookInfos[bookInfoId]);
+        $(this).attr("class", "bookInfoLinkSelected bookInfoLink");
+    });
 
 
-    bookCoverTag.click(function () {
-        let bookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
+    bookCoverTag.click(function (e) {
+        e.preventDefault();
+        currentBookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
         bookDetailsWrapperTag.css("display", "flex");
-        selectedBookTag.attr("src", bookCovers[bookId]);
-        bookTitleTag.html(bookTitles[bookId]);
-        bookSummaryTag.html(bookDescriptions[bookId]);
-        let selectedBookCharacters = bookCharacters[bookId];
-        let htmlCharacters = "";
-        for (let characterKey of Object.keys(selectedBookCharacters)) {
-            htmlCharacters += "<a href='#' class='bookCharacterLink' id='" + characterKey + "_" + bookId + "_link'>";
-            htmlCharacters += "@" + characterKey;
-            htmlCharacters += "</a> ";
+        selectedBookTag.attr("src", bookCovers[currentBookId]);
+        bookTitleTag.html(bookTitles[currentBookId]);
+        let selectedBookInfos = bookInfos[currentBookId];
+        let htmlInfos = "";
+        for (let key of Object.keys(selectedBookInfos)) {
+            htmlInfos += "<a href='#' class='bookInfoLink' id='" + key + "_infoLink'>";
+            htmlInfos += "@" + key;
+            htmlInfos += "</a> ";
         }
-
-        console.log(htmlCharacters);
-        bookCharactersTag.html(htmlCharacters
+        bookSummaryTag.html(selectedBookInfos[0]);
+        bookInfoLinkTag = $(".bookInfoLink");
+        console.log(htmlInfos);
+        bookInfosTag.html(htmlInfos
         );
     });
 
