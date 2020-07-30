@@ -81,7 +81,16 @@ const bookInfos = {
             "<br/>" +
             "Il a recueilli Yuna lorsqu'elle avait 10 ans, et, malgré un difficile apprivoisement mutuel, l'a soignée, l'a instruite, et lui a confié ses tout premiers travaux sur les terres de Nads. Aujourd'hui encore, même si Yuna voyage de plus en plus longtemps et de plus en plus loin, même si Tommy et Eunice travaillent à fonder leur propre foyer, leur demeure reste son havre, son point de chute." +
             "<br/>" +
-            "Pour ceux qui souhaitent en savoir un peu plus sur ce personnage, je vous suggère d'aller lire \"L'enfant de Valmort\", le spin-off qui narre leur première rencontre."
+            "Pour ceux qui souhaitent en savoir un peu plus sur ce personnage, je vous suggère d'aller lire \"L'enfant de Valmort\", le spin-off qui narre leur première rencontre.",
+        "frost": "Têtu, sanguin et bagarreur, Frost est aspirant soldat à la prestigieuse académie militaire de Shirolite et, à ce jour, détient le record du plus grand nombre de sanctions disciplinaires. "
+            + "Malgré son tempérament associable, Frost n'est jamais le dernier à la taverne, au grand dam de ceux qui l'accompagnent : en effet, c'est un excellent danseur, mais un très mauvais buveur."
+            + "<br/>"
+            + "Exclu de l'école à l'âge de quinze ans et forcé d'abandonner son projet d'être soigneur équin, et de se retrancher dans l'armée, comme la plupart des garçons dans sa situation. "
+            + "<br/>"
+            + "Il n'en est cependant pas malheureux car son métier lui permet de canaliser sa fougue débordante et de régler plus ou moins légalement ses comptes à coups de poings."
+            + "Un coup reçu, deux rendus. Au combat, Frost se distingue par sa force de frappe, son agressivité, et sa rapidité. Son arme de prédilection est la claymore, mais il se débrouille également à l'épée simple, et manie de façon rudimentaire le boomerang, l'arc et le fouet de guerre."
+            + "<br/>"
+            + "Quand j'ai créé Frost, il n'était qu'un soldat parmi d'autres. D'ailleurs, il n'était même pas prévu dans le synopsis et s'est imposé tout seul à partir de l'épisode 2 : Délit de fuite. Et depuis, je n'envisage plus mon intrigue sans lui."
     }
 };
 
