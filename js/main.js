@@ -91,6 +91,12 @@ const bookInfos = {
             + "Un coup reçu, deux rendus. Au combat, Frost se distingue par sa force de frappe, son agressivité, et sa rapidité. Son arme de prédilection est la claymore, mais il se débrouille également à l'épée simple, et manie de façon rudimentaire le boomerang, l'arc et le fouet de guerre."
             + "<br/>"
             + "Quand j'ai créé Frost, il n'était qu'un soldat parmi d'autres. D'ailleurs, il n'était même pas prévu dans le synopsis et s'est imposé tout seul à partir de l'épisode 2 : Délit de fuite. Et depuis, je n'envisage plus mon intrigue sans lui."
+        ,
+        "philomene": "Issue d'une famille de magiciens émérites, Philomène a tout pour perpétrer ce qui semble être une tradition familiale : la curiosité, la vivacité d'esprit... mais hélas, pas le talent, ni la rigueur, ce qui la conduit parfois à des situations, au mieux, cocasses, au pire, dangereuses.</br>" +
+            "Malgré son désintérêt pour la magie élémentaire, dans laquelle elle s'est pourtant spécialisée, malgré la vanité de ses efforts, Philomène s'accroche longtemps à ses études. Pourquoi ? Pour ne pas décevoir ses parents ? Pour se dire que, comme ses trois soeurs aînées, elle est capable de réussir de brillantes études de magie ? Ou tout simplement parce que l'univers dans lequel elle a grandi l'empêche d'envisager autre chose pour son futur ?</br>" +
+            "Malgré toute sa bonne volonté, Philomène reste distraite et maladroite, ce qui complique énormément ses rapports avec Heath, lequel passe son temps à lui rappeler son piètre niveau - ce qui, évidemment, n'aide pas à la faire progresser.</br>" +
+            "Toutefois, pour parer à cela, Philomène possède deux armes essentielles : une persévérance à toute épreuve, et une dose colossale d'auto-dérision. Du moins, est-ce là l'apparence qu'elle maintient, tant pour elle-même que pour les autres.</br>" +
+            "Volontaire, débrouillarde, et entreprenante, Philomène préfère toutefois suivre que diriger. Sa présence attentive et bienveillante fait d'elle un soutien indispensable, ce qui ne l'empêche pas de se montrer ferme, voire froide, lorsque la situation l'exige. De plus, elle émet souvent des jugements rapides, sur lesquels elle ne revient pas, ce qui peut l'amener à manquer de discernement. "
     }
 };
 
