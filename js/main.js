@@ -53,8 +53,8 @@ const bookTitles = {
 
 const bookButtons = {
     "adda": {
-        "scribay": "https://www.scribay.com/text/1166040301/adda---saison-1---les-anges-dechus",
-        "wattpad": "https://www.wattpad.com/325976668-adda-s1_e01-la-mort-corrompue-prologue"
+        "muple": "https://muple.fr/book/101",
+        "scribay": "https://www.scribay.com/text/1166040301/adda---saison-1---les-anges-dechus"
     }
 };
 
@@ -128,18 +128,19 @@ const writingTitles = {
 
 const writingButtons = {
     "ameEgaree": {
+        "muple": "https://muple.fr/book/134",
         "scribay": "https://www.scribay.com/text/808338942/l-ame-egaree",
         "revedelignes": "https://revedelignes.com/titres/lame-egaree/"
     },
     "balTulipe": {
+        "muple": "https://muple.fr/book/166",
         "scribay": "https://www.scribay.com/text/1954759394/le-bal-des-tulipe"
     },
     "mia": {
+        "muple": "https://muple.fr/book/139",
         "scribay": "https://www.scribay.com/text/1720137389/mia",
-        "wattpad": "https://www.wattpad.com/733474694-mia-4-septembre"
     },
     "philomene": {
-        "wattpad": "https://www.wattpad.com/614989477-philom%C3%A8ne-1",
         "revedelignes": "https://revedelignes.com/titres/philomene-partie-1/"
     }
 };
@@ -194,8 +195,8 @@ function generateWritings() {
         writingButtonDictionnary = writingButtons[writingIdList[i]];
         if (writingButtonDictionnary.hasOwnProperty("scribay"))
             finalHtml += "<img class=\"writingButton\" src=\"img/scribayButton.png\" alt=\"scribayButton\" id='" + writingIdList[i] + "_scribay' title='Lire sur Scribay'>";
-        if (writingButtonDictionnary.hasOwnProperty("wattpad"))
-            finalHtml += "<img class=\"writingButton\" src=\"img/wattpadButton.png\" alt=\"wattpadButton\" id='" + writingIdList[i] + "_wattpad' title='Lire sur Wattpad'>";
+        if (writingButtonDictionnary.hasOwnProperty("muple"))
+            finalHtml += "<img class=\"writingButton\" src=\"img/mupleButton.png\" alt=\"mupleButton\" id='" + writingIdList[i] + "_muple' title='Lire sur Muple'>";
         if (writingButtonDictionnary.hasOwnProperty("revedelignes"))
             finalHtml += "<img class=\"writingButton\" src=\"img/revedelignesButton.png\" alt=\"revedelignesButton\" id='" + writingIdList[i] + "_revedelignes' title='Lire sur Rêve de Lignes'>";
         if (writingButtonDictionnary.hasOwnProperty("youtube"))
