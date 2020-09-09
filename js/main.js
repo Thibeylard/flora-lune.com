@@ -62,7 +62,8 @@ const bookInfos = {
     "adda": {
         "synopsis": "Bannis et emprisonnés pendant des siècles par les anges, les nephilims se vengent et pourchassent leurs " +
             "bourreaux jusqu'en Ikkai, le monde des humains. Et, lorsqu'elle trouve le cadavre de l'un d'entre eux amputé " +
-            "de ses ailes, Yuna ignore encore qu'elle s'apprête à prendre part à une guerre à laquelle elle n'est pas étrangère... ",
+            "de ses ailes, Yuna ignore encore qu'elle s'apprête à prendre part à une guerre à laquelle elle n'est pas étrangère... "
+        ,
         "heath": "Insupportable bourreau des coeurs, manipulateur invétéré, Heath est pourtant l'un, si ce n'est LE personnage central d'ADDA." +
             "<br/>" +
             "Officiellement en dernière année de magie thérapeutique et défensive, Heath maîtrise également la magie élémentaire, la magie minérale, le combat à mains nues et la quasi-totalité des armes existantes, sa préférée étant le pistolet." +
@@ -75,13 +76,15 @@ const bookInfos = {
             "<br/>" +
             "Mais, le vrai mystère de ce personnage - pour moi y compris - réside dans son imprévisibilité. Changeant, instable, il est capable de l'amour le plus sincère et de la haine la plus profonde, d'une bienveillance pure comme de la cruauté proche de la folie." +
             "<br/>" +
-            "En somme, Heath représente un véritable défi pour moi, et plus ses défauts m'apparaissent, plus son évolution devient intéressante.",
+            "En somme, Heath représente un véritable défi pour moi, et plus ses défauts m'apparaissent, plus son évolution devient intéressante."
+        ,
         "tommy": "Tommy est un médecin de 33 ans, qui a fait ses études à la très réputée académie de Valcendré, et c'est aujourd'hui le meilleur (et seul) médecin de Valroux, exerçant en association avec Eunice, son épouse, pharmacienne." +
             "Tommy est donc ce qu'on peut appeler un érudit, mais surtout un homme très intelligent, droit, sévère, et intransigeant." +
             "<br/>" +
             "Il a recueilli Yuna lorsqu'elle avait 10 ans, et, malgré un difficile apprivoisement mutuel, l'a soignée, l'a instruite, et lui a confié ses tout premiers travaux sur les terres de Nads. Aujourd'hui encore, même si Yuna voyage de plus en plus longtemps et de plus en plus loin, même si Tommy et Eunice travaillent à fonder leur propre foyer, leur demeure reste son havre, son point de chute." +
             "<br/>" +
-            "Pour ceux qui souhaitent en savoir un peu plus sur ce personnage, je vous suggère d'aller lire \"L'enfant de Valmort\", le spin-off qui narre leur première rencontre.",
+            "Pour ceux qui souhaitent en savoir un peu plus sur ce personnage, je vous suggère d'aller lire \"L'enfant de Valmort\", le spin-off qui narre leur première rencontre."
+        ,
         "frost": "Têtu, sanguin et bagarreur, Frost est aspirant soldat à la prestigieuse académie militaire de Shirolite et, à ce jour, détient le record du plus grand nombre de sanctions disciplinaires. "
             + "Malgré son tempérament associable, Frost n'est jamais le dernier à la taverne, au grand dam de ceux qui l'accompagnent : en effet, c'est un excellent danseur, mais un très mauvais buveur."
             + "<br/>"
@@ -97,6 +100,12 @@ const bookInfos = {
             "Malgré toute sa bonne volonté, Philomène reste distraite et maladroite, ce qui complique énormément ses rapports avec Heath, lequel passe son temps à lui rappeler son piètre niveau - ce qui, évidemment, n'aide pas à la faire progresser.</br>" +
             "Toutefois, pour parer à cela, Philomène possède deux armes essentielles : une persévérance à toute épreuve, et une dose colossale d'auto-dérision. Du moins, est-ce là l'apparence qu'elle maintient, tant pour elle-même que pour les autres.</br>" +
             "Volontaire, débrouillarde, et entreprenante, Philomène préfère toutefois suivre que diriger. Sa présence attentive et bienveillante fait d'elle un soutien indispensable, ce qui ne l'empêche pas de se montrer ferme, voire froide, lorsque la situation l'exige. De plus, elle émet souvent des jugements rapides, sur lesquels elle ne revient pas, ce qui peut l'amener à manquer de discernement. "
+        ,
+        "yuna": "Héroïne d’Adda, Yuna est une jeune fille solitaire, taciturne, mais aussi impulsive et bagarreuse.</br>" +
+            "Elle est née à Valmort dans une famille de trois enfants, plus que misérable. Aussi, son premier métier est voleuse à la tire, avant de devenir coursière à l’âge de 11 ans sous la houlette de Tommy.</br>" +
+            "Débrouillarde et indépendante, elle aime l’idée de ne rien devoir à personne. Le réflexe du rationnement est profondément ancré en elle, ce qui la rend très économe, trop parfois. Comme elle est en perpétuel mouvement, elle se lie rarement d’amitié et sa vie amoureuse se résume à des aventures plus ou moins longues mais sans engagement. De manière générale, elle préfère être seule plutôt que d’avoir à changer son rythme de vie.</br>" +
+            "Enfin, ses émotions sont un vrai problème pour elle, tant pour les nommer que les exprimer, et pire encore, pour les canaliser, ses réactions premières étant bien souvent sanguines.</br>" +
+            "Pour la petite histoire, j’ai eu beaucoup de mal à apprivoiser Yuna, car c’est la première fois que je suis un personnage dont la personnalité est aussi éloignée de la mienne. D’ailleurs, dans les premières versions, elle était beaucoup moins ouverte, comme si finalement je n’arrivais pas à la révéler "
     }
 };
 
