@@ -7,18 +7,13 @@
 /*
 ------------------------------------------------------------------------ Support Links Data
 */
-const supportLinkTitle = {
-    "tipeeeLink": "Tipeee",
-    "facebookLink": "Facebook",
-    "twitterLink": "Twitter",
-    "scribayLink": "Scribay",
-};
 
 const supportLinkDescription = {
-    "tipeeeLink": "Tipee est une plate-forme de financement participatif ! Si vous aimez ce que je crée, " +
+    "tipeeeLink": "Tipee est une plate-forme de financement participatif. Si vous aimez ce que je crée, " +
         "vous pouvez me laisser des \"pourboires\" mensuels, et ainsi avoir accès à des contenus exclusifs ! " +
-        "Vous trouverez plus de détails sur ma page dédiée.",
-    "facebookLink": "En aimant la page \"Flora Lune\", vous m'offrez une plus grande visibilité. Il est également possible " +
+        "Vous trouverez plus de détails sur ma page dédiée. C'est la forme d'aide la plus concrète puisqu'elle " +
+        "pourrait me permettre, à terme, de me consacrer uniquement à l'écriture.",
+    "facebookLink": "En aimant ma page Facebook, vous m'offrez une plus grande visibilité. Il est également possible " +
         "de partager avec vos proches son contenu, et donc de faire connaître plus facilement mon travail. Bien que ce soit une aide moins " +
         "concrète qu'avec Tipeee, le partage de contenu est primordial. C'est aussi gratuit !",
     "twitterLink": "Twitter est le réseau social de partage par excellence. En me suivant, et en faisant suivre mes tweets, vous " +
@@ -381,6 +376,5 @@ function selectSupportLink(linkSelector) {
     otherLinks.css("margin", "25px 12px 0 13px");
     otherLinks.css("height", "100px");
 
-    $("#supportTitle").html(supportLinkTitle[linkAlt]);
     $("#supportDescription").html(supportLinkDescription[linkAlt]);
 }
