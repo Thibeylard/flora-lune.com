@@ -101,6 +101,15 @@ const bookInfos = {
             "Débrouillarde et indépendante, elle aime l’idée de ne rien devoir à personne. Le réflexe du rationnement est profondément ancré en elle, ce qui la rend très économe, trop parfois. Comme elle est en perpétuel mouvement, elle se lie rarement d’amitié et sa vie amoureuse se résume à des aventures plus ou moins longues mais sans engagement. De manière générale, elle préfère être seule plutôt que d’avoir à changer son rythme de vie.</br>" +
             "Enfin, ses émotions sont un vrai problème pour elle, tant pour les nommer que les exprimer, et pire encore, pour les canaliser, ses réactions premières étant bien souvent sanguines.</br>" +
             "Pour la petite histoire, j’ai eu beaucoup de mal à apprivoiser Yuna, car c’est la première fois que je suis un personnage dont la personnalité est aussi éloignée de la mienne. D’ailleurs, dans les premières versions, elle était beaucoup moins ouverte, comme si finalement je n’arrivais pas à la révéler "
+        ,
+        "clement": " Âgé de dix-huit ans au début de l’histoire, Clément est le fils de Sandra, tenancière de l’auberge du Pur-Sang, et de Béric, ancien général à la retraite originaire de Fort-Cristal.</br>" +
+            "De tous les personnages que j’ai créés, Clément est, je crois, celui qui plaît le plus. Il est d’ailleurs resté mon personnage préféré pendant assez longtemps.</br>" +
+            "Pourquoi cet engouement ? Parce que Clément est le genre d’ami qu’on voudrait tous avoir. Un garçon loyal, gentil, affectueux, un brin maladroit, et toujours une bonne blague au bord des lèvres.</br>" +
+            "Motivé depuis toujours par l’exemple de son père, Clément aspire à devenir soldat et à intégrer la prestigieuse armée de Shirolite, sa ville natale. Ayant quitté l’école à l’âge de seize ans, il attend patiemment sa majorité en aidant ses parents à l’auberge, mais également en assistant aux entraînements des soldats.</br>" +
+            "Garçon au cœur tendre, il n’aime pas les effusions de sang inutiles, aussi, son arme de prédilection est la massue, bien qu’il ait appris quelques rudiments de l’épée. Il manie également le boomerang et l’arc, avec moins de précision cependant.</br>" +
+            "Si Clément peut se montrer susceptible, il est rare de le voir vraiment en colère, et, contrairement à Frost qui en vient facilement aux mains, il ne porte jamais le premier coup, si ce n’est en combat réel.</br>" +
+            "Et, à ses yeux, violenter une femme est le comble de la honte pour un homme, et jamais il ne laissera un tel spectacle se produire devant ses yeux, quitte à y laisser quelques dents.</br>" +
+            "Véritable feu follet, Clément ne parvient pas à entretenir d’amitiés solides (si ce n’est avec Frost, puis, plus tard, avec Yuna et Philomène), ni n’a de vie sentimentale... connue. Car oui, à l’insu du lecteur, Clément est amoureux. Mais de qui ? Dans la version précédente, Yuna était l’élue de son cœur. Dans celle-ci... je vous laisserai le découvrir... à l’occasion d’un spin-off ? "
     }
 };
 
