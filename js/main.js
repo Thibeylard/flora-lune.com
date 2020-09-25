@@ -249,6 +249,34 @@ function setEventsOnDynamicElements() {
         bookSummaryTag.scrollTop(0);
     });
 
+
+    bookCoverTag.click(function () {
+        currentBookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
+
+        // Prevent back scrolling when book displayed
+        $("body").css({'overflow': 'hidden'});
+
+        bookDetailsWrapperTag.css("display", "flex");
+        selectedBookTag.attr("src", bookCovers[currentBookId]);
+        bookTitleTag.html(bookTitles[currentBookId]);
+        let selectedBookInfos = bookInfos[currentBookId];
+        let htmlInfos = "";
+        let infoId = "";
+        for (let key of Object.keys(selectedBookInfos)) {
+            infoId = key + "_infoLink";
+            if (key === "synopsis") {
+                htmlInfos += "<a href='#' class='bookInfoLink bookInfoLinkSelected' id='" + infoId + "'>";
+            } else {
+                htmlInfos += "<a href='#' class='bookInfoLink' id='" + infoId + "'>";
+            }
+            htmlInfos += "@" + key;
+            htmlInfos += "</a> ";
+        }
+        bookSummaryTag.html(selectedBookInfos['synopsis']);
+        bookInfosTag.html(htmlInfos
+        );
+    });
+
     /*
     -------------- Writings click event
     */
@@ -318,43 +346,13 @@ pencilTexts.click(function (e) { // Nav button click event : Scroll to according
 ------------------------------------------------------------------------ Book static elements events
 */
 
-bookCoverTag.click(function () {
-    currentBookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
-
-    // Prevent back scrolling when book displayed
-    $("body").css({'overflow': 'hidden'});
-
-    bookDetailsWrapperTag.css("display", "flex");
-    selectedBookTag.attr("src", bookCovers[currentBookId]);
-    bookTitleTag.html(bookTitles[currentBookId]);
-
-    let selectedBookInfos = bookInfos[currentBookId];
-    let htmlInfos = "";
-    let infoId = "";
-    for (let key of Object.keys(selectedBookInfos)) {
-        infoId = key + "_infoLink";
-        if (key === "synopsis") {
-            htmlInfos += "<a href='#' class='bookInfoLink bookInfoLinkSelected' id='" + infoId + "'>";
-        } else {
-            htmlInfos += "<a href='#' class='bookInfoLink' id='" + infoId + "'>";
-        }
-        htmlInfos += "@" + key;
-        htmlInfos += "</a> ";
-    }
-    bookSummaryTag.html(selectedBookInfos['synopsis']);
-    bookInfosTag.html(htmlInfos
-    );
-});
-
 // Get the <span> element that closes the modal
 let span = $("#closeBookZoom");
 
 // When the user clicks on <span> (x), close the modal
 span.click(function () {
     $("#bookZoomWrapper").css("display", "none");
-    // $(document).unbind('scroll');
     $("body").css({'overflow': 'scroll'});
-
 });
 
 /*
