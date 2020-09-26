@@ -62,41 +62,66 @@ header {
 }
 
 section#page {
-    width: 100%;
+    width: 80%;
+    margin-left: 20%;
 }
 
 #logo {
     width: 250px;
     height: 250px;
-    position: absolute;
+    position: fixed;
 }
 
 header nav {
-    display:none;
+    position: fixed;
+    left: -30px;
+    top: 260px;
 }
 
 p {
     text-align: justify;
 }
 
+.pencils {
+    display: block;
+    width: 250px;
+    margin: -5px -5px -5px -40px;
+    padding: 0;
+}
+
+.pencilLabels:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.pencilLabels {
+    font-family: 'blokletters-regular', sans-serif;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    left: 40px;
+    top: 27px;
+    margin: 0;
+    padding: 0;
+}
+
 .blokletter_title {
     font-family: 'blokletters-thin', sans-serif;
-    text-align: center;
+    text-align: right;
     color: white;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: normal;
-    margin: 5px 5px 5px auto;
+    margin: 5px;
     width: 80%;
 }
 
 .pepita_title {
     font-family: 'pepita-script', sans-serif;
     color: white;
-    font-size: 3em;
-    margin: 5px 5px 5px auto;
-    font-weight: normal;
-    width: 80%;
+    font-size: 6em;
+    margin: 10px;
     text-align: center;
+    font-weight: normal;
 }
 
 
@@ -143,14 +168,22 @@ section#introduction > * {
 }
 
 section#introduction p {
-    width: 90%;
+    width: 65%;
     margin-right: 40px;
     margin-top: 0;
     text-align: justify;
 }
 
 #socialMediaWrapper > * {
-    display: none;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.socialMediaIcon:hover {
+    filter: brightness(1.4);
+    cursor: pointer;
 }
 
 /*
@@ -437,15 +470,15 @@ section#author p {
     display: inline-block;
     text-align: center;
     margin-bottom: 30px;
-    width: 100%
 }
 
 #descriptionLinks {
-    display: none;
+    display: inline-block;
+    width: 60%
 }
 
 img.supportLink {
-    height: 180px;
+    height: 100px;
     margin: 25px 12px 0 13px;
 }
 
@@ -459,5 +492,13 @@ img.supportLink:hover {
 }
 
 #supportDescription {
-    display:none;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    border-radius: 10px 50px 10px 50px;
+    padding: 20px;
+    background-color: #374845;
+    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
 }
