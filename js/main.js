@@ -398,7 +398,7 @@ function setMobileSupportSection() {
     otherLinks.css("height", "180px");
 
     $("#support > p").html("À l'ère d'internet, il existe plus d'une façon de soutenir des artistes indépendants.<br>" +
-        "            Chacune des icônes suivantes en représente une différente, mais elles ne sont pas plus importantes les unes que les autres !<br>" +
+        "            Chacune des icônes suivantes en représente une différente, mais elles me sont toutes d'une grande aide !<br>" +
         "            Merci d'avance ! <3");
 }
 
