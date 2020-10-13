@@ -83,8 +83,8 @@ p {
     font-family: 'blokletters-thin', sans-serif;
     text-align: center;
     color: white;
-    font-size: 2em;
-    font-weight: normal;
+    font-size: 3.5em;
+    font-weight: bold;
     margin: 5px 5px 5px auto;
     width: 80%;
 }
@@ -92,7 +92,7 @@ p {
 .pepita_title {
     font-family: 'pepita-script', sans-serif;
     color: white;
-    font-size: 3em;
+    font-size: 5em;
     margin: 5px 5px 5px auto;
     font-weight: normal;
     width: 80%;
@@ -102,7 +102,7 @@ p {
 
 .handdrawn {
     font-family: 'caroni', sans-serif;
-    font-size: 2.2em;
+    font-size: 3em;
     background-image: url("../img/bookPageBackground.png");
     background-repeat: repeat-y;
     padding: 1% 2% 1% 10%;
@@ -442,7 +442,6 @@ section#author p {
 }
 
 img.supportLink {
-    height: 180px;
     margin: 25px 12px 0 13px;
 }
 

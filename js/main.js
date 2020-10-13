@@ -173,8 +173,17 @@ let writingDescriptionVisible = {
 ------------------------------------------------------------------------ Page html generation
 */
 
+let isMobile;
+
 $(document).ready(function () {
-    selectSupportLink($(".supportLink[alt=tipeeeLink]")); // Select Tipeee support Link as default.
+    if(jQuery(window).width() > 1000) {
+        isMobile = false;
+        selectSupportLink($(".supportLink[alt=tipeeeLink]")); // Select Tipeee support Link as default.
+    } else {
+        isMobile = true;
+        setMobileSupportSection();
+    }
+
     //generateBooks();
     generateWritings();
     setEventsOnDynamicElements();
@@ -353,7 +362,6 @@ span.click(function () {
     $("#bookZoomWrapper").css("display", "none");
     // $(document).unbind('scroll');
     $("body").css({'overflow': 'scroll'});
-
 });
 
 /*
@@ -378,6 +386,20 @@ $(".socialMediaIcon").click(function () {
 
 function socialMediaLink(el) {
     window.location.href = supportLinkDestination[el.attr("alt")];
+}
+
+function setMobileSupportSection() {
+    let linkSelector = $(".supportLink[alt=tipeeeLink]");
+    linkSelector.css("height", "250px");
+
+    let linkAlt = linkSelector.attr("alt");
+    let otherLinks = $(`.supportLink[alt!=${linkAlt}]`);
+
+    otherLinks.css("height", "180px");
+
+    $("#support > p").html("À l'ère d'internet, il existe plus d'une façon de soutenir des artistes indépendants.<br>" +
+        "            Chacune des icônes suivantes en représente une différente, mais elles ne sont pas plus importantes les unes que les autres !<br>" +
+        "            Merci d'avance ! <3");
 }
 
 function selectSupportLink(linkSelector) {
