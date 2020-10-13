@@ -202,14 +202,11 @@ section#books {
 }
 
 #bookCoverWrapper {
-    flex: 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
 }
 
 #bookCover {
-    max-height: 600px;
+    display: none;
 }
 
 #bookCoverWrapper + div {
@@ -226,7 +223,7 @@ section#books {
 
 #bookTitle {
     font-family: 'pepita-script', sans-serif;
-    font-size: 2.5em;
+    font-size: 4em;
     color: white;
     margin: 0;
     padding-bottom: 20px;
@@ -240,7 +237,7 @@ section#books {
 
 #bookButtonWrapper img {
     flex: initial;
-    max-width: 60px;
+    max-width: 120px;
     margin: 0 10px 0 10px;
 }
 
@@ -248,18 +245,19 @@ section#books {
     font-family: 'lilly', sans-serif;
     margin: auto;
     display: block;
-    width: 80%;
+    width: 90%;
     max-width: 700px;
-    text-align: justify;
+    text-align: left;
     color: #ccc;
     padding: 15px;
     overflow-y: auto;
-    height: 55%;
+    height: 85%;
 }
 
 #bookInfosLinks {
     font-family: 'lilly', sans-serif;
     text-align: center;
+    font-size: 1.5em;
     color: #ccc;
 }
 
@@ -363,20 +361,20 @@ section#writings img.writingButton {
     flex: initial;
     align-self: center;
     justify-self: flex-end;
-    margin: 0 10px 10px 10px;
-    max-width: 60px;
+    margin: 0 15px 10px 15px;
+    max-width: 75px;
 }
 
 p.writingSummary {
     display: none;
     position: relative;
     bottom: 16px;
+    width: 90%;
     z-index: -1;
-    font-size: 1em;
+    font-size: 0.8em;
     margin-left: auto;
     margin-top: auto;
     border-radius: 0 0 30px 30px;
-    max-width: 700px;
     padding: 20px;
     background-color: #4a635e;
     box-shadow: 0 15px rgba(0, 0, 0, 0.5);
@@ -397,7 +395,7 @@ section#author div:nth-of-type(1) {
 }
 
 section#author aside img {
-    width: 70%;
+    width: 100%;
 }
 
 section#author p {
@@ -406,7 +404,6 @@ section#author p {
 
 .bookReference {
     font-family: 'lilly', sans-serif;
-    font-size: 0.7em;
     font-style: italic;
     color: orangered;
 }
