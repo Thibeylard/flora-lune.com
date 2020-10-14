@@ -425,14 +425,14 @@ function setMobileSupportSection() {
 }
 
 function selectSupportLink(linkSelector) {
-    linkSelector.css("height", "125px");
+    let linkAlt = linkSelector.attr("alt");
+   /* linkSelector.css("height", "125px");
     linkSelector.css("margin", "0");
 
-    let linkAlt = linkSelector.attr("alt");
     let otherLinks = $(`.supportLink[alt!=${linkAlt}]`);
 
     otherLinks.css("margin", "25px 12px 0 13px");
-    otherLinks.css("height", "100px");
+    otherLinks.css("height", "100px");*/
 
     $("#supportDescription").html(supportLinkDescription[linkAlt]);
 }

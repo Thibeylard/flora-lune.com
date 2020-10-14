@@ -426,7 +426,12 @@ section#author p {
     display: none;
 }
 
+#tipeeeSupport {
+    height:250px;
+}
+
 img.supportLink {
+    height: 180px;
     margin: 25px 12px 0 13px;
 }
 
@@ -608,6 +613,16 @@ img.supportLink:hover {
     ------------------------------------------------------------------------ SUPPORT SECTION
     =============================================================================
     */
+
+    img.supportLink, #tipeeeSupport {
+        margin: 25px 12px 0 13px;
+        height:100px;
+    }
+
+    img.supportLink:hover, #tipeeeSupport:hover {
+        margin:0;
+        height:125px;
+    }
 
     #descriptionLinks {
         display: inline-block;
