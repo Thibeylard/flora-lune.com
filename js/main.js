@@ -299,8 +299,10 @@ function setEventsOnDynamicElements() {
                 if(found) {
                     break;
                 }
+            } else if("synopsis" === optionSelected.val().toLowerCase()) {
+                bookSummaryTag.html(selectedBookInfos[category]);
+                break;
             }
-            // TODO Fix synopsis case not updating info text
         }
         bookSummaryTag.scrollTop(0);
     });
