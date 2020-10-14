@@ -80,6 +80,8 @@ p {
 }
 
 .blokletter_title {
+    font-family: 'blokletters-thin', sans-serif;
+    color: white;
     text-align: center;
     font-size: 3.5em;
     font-weight: bold;
@@ -490,9 +492,7 @@ img.supportLink:hover {
     }
 
     .blokletter_title {
-        font-family: 'blokletters-thin', sans-serif;
         text-align: right;
-        color: white;
         font-size: 4em;
         font-weight: normal;
         margin: 5px;
@@ -600,34 +600,30 @@ img.supportLink:hover {
     .bookReference {
         font-size: 0.7em;
     }
-}
 
 
-/*
-=============================================================================
------------------------------------------------------------------------- SUPPORT SECTION
-=============================================================================
-*/
 
-#descriptionLinks {
-    display: inline-block;
-    width: 60%
-}
+    /*
+    =============================================================================
+    ------------------------------------------------------------------------ SUPPORT SECTION
+    =============================================================================
+    */
 
-img.supportLink {
-    height: 100px;
-    margin: 25px 12px 0 13px;
-}
+    #descriptionLinks {
+        display: inline-block;
+        width: 60%
+    }
 
-#supportDescription {
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    margin: auto;
-    font-size: 1.3em;
-    margin-bottom: 40px;
-    border-radius: 10px 50px 10px 50px;
-    padding: 20px;
-    background-color: #374845;
-    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
+    #supportDescription {
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        margin: auto;
+        font-size: 1.3em;
+        margin-bottom: 40px;
+        border-radius: 10px 50px 10px 50px;
+        padding: 20px;
+        background-color: #374845;
+        box-shadow: 0 15px rgba(0, 0, 0, 0.5);
+    }
 }
