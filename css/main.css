@@ -251,24 +251,15 @@ section#books {
     color: #ccc;
     padding: 15px;
     overflow-y: auto;
-    height: 85%;
+    height: 80%;
 }
 
-#bookInfosLinks {
-    font-family: 'lilly', sans-serif;
-    text-align: center;
-    font-size: 1.5em;
-    color: #ccc;
-}
 
 .bookInfoLink, .bookInfoLink:visited {
     color: #ccc;
     text-decoration: none;
 }
 
-.bookInfoLinkSelected {
-    color: #cc243c;
-}
 
 .bookInfoLink:hover {
     color: orange;
@@ -303,6 +294,18 @@ section#books {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+#bookInfosList {
+    /*width: 40%;*/
+    font-size: 1.5em;
+    font-family: 'lilly', sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+optgroup + optgroup {
+    border-top: 1px solid black;
 }
 
 @media only screen and (max-width: 1000px) {
