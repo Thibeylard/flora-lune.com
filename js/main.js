@@ -300,6 +300,7 @@ function setEventsOnDynamicElements() {
                     break;
                 }
             }
+            // TODO Fix synopsis case not updating info text
         }
         bookSummaryTag.scrollTop(0);
     });
@@ -366,7 +367,7 @@ pencilTexts.click(function (e) { // Nav button click event : Scroll to according
     e.preventDefault();
     let destinationId = $(this).attr("href");
     let destination = $(`section${destinationId}`);
-    $('html,body').animate({scrollTop: destination.offset().top}, 'slow');
+    $('html,body').animate({scrollTop: destination.offset().top - 40}, 'slow');
 });
 
 /*

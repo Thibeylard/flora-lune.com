@@ -454,8 +454,12 @@ img.supportLink:hover {
         margin-left: 20%;
     }
 
+    #logo {
+        position: fixed;
+    }
 
     header nav {
+        display: block;
         position: fixed;
         left: -30px;
         top: 260px;
@@ -559,7 +563,7 @@ img.supportLink:hover {
 
     #bookSummary {
         text-align: justify;
-        height: 55%;
+        height: 70%;
     }
 
     /*
