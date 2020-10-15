@@ -420,6 +420,7 @@ section#author p {
     display: inline-block;
     text-align: center;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 #descriptionLinks {
@@ -455,7 +456,7 @@ img.supportLink:hover {
 ------------------------------------------------------------------------ LAPTOP
 =============================================================================
 */
-@media only screen and (min-width: 600px){
+@media all and (min-device-width: 768px){
     section#page {
         width: 80%;
         margin-left: 20%;
@@ -614,6 +615,10 @@ img.supportLink:hover {
     =============================================================================
     */
 
+    #supportLinks {
+        width: 40%;
+    }
+
     img.supportLink, #tipeeeSupport {
         margin: 25px 12px 0 13px;
         height:100px;
@@ -626,7 +631,7 @@ img.supportLink:hover {
 
     #descriptionLinks {
         display: inline-block;
-        width: 60%
+        width: 55%
     }
 
     #supportDescription {
