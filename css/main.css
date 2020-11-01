@@ -83,14 +83,22 @@ p {
     text-align: justify;
 }
 
-.blokletter_title {
+.blokletter_title, .book_title {
     font-family: 'blokletters-thin', sans-serif;
     color: white;
-    text-align: center;
-    font-size: 3.5em;
     font-weight: bold;
     margin: 5px 5px 5px auto;
+    text-align: center;
+}
+
+.book_title {
+    margin: 5%;
+    font-size: 5em;
+}
+
+.blokletter_title {
     width: 80%;
+    font-size: 3.5em;
 }
 
 .pepita_title, .pepita_book_title {
@@ -106,6 +114,18 @@ p {
     width: 80%;
 }
 
+.bookSynopsis {
+    font-family: 'caroni', sans-serif;
+    color: antiquewhite;
+    font-size: 3em;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.bookSynopsisWrapper {
+    background-color: rgba(0,0,0,0.3);
+}
 
 .handdrawn {
     font-family: 'caroni', sans-serif;
@@ -249,8 +269,10 @@ section#books {
     border-bottom: rgba(255,255,255,0.5) solid 10px;
 }
 
-.elementCorelDetails {
+.elementImgWrapper {
+    display: none;
 }
+
 
 .elementCoreImgWrapper {
     flex: 0;
