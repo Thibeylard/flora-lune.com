@@ -195,7 +195,7 @@ section#books {
 ------------------------------------------------------------------------ Book Page
 */
 
-.scrollBlock {
+.slideshow {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
@@ -203,49 +203,67 @@ section#books {
     margin-bottom : 20px;
 }
 
-div.scrollWrapper {
+.slideshowElementWrapper {
     display: flex;
     flex:none;
-    width:90%;
-    /*margin: 0 5% 0 5%;*/
+    width:100%;
     text-align: center;
     position:relative;
+}
+
+.elementCoreWrapper {
+    flex:auto;
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0,0,0,0.50);
-    border-radius: 40px;
 }
 
-div.scroller {
-    background-color: red;
-    width: 5%;
+.elementScrollLeft, .elementScrollRight {
+    flex:0.2;
+    background-color: rgba(255,255,255,0.5);
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.elementScrollImgWrapper {
+.elementScrollRight {
+    border-radius: 0 20px 20px 0;
+}
+
+.elementScrollLeft {
+    border-radius: 20px 0 0 20px;
+}
+
+.elementScrollLeft > img, .elementScrollRight > img{
+    width: 50%;
+}
+
+.elementCoreTitle {
+    flex-direction: column;
+    font-family: 'blokletters-bold', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3.5em;
+    margin:0;
+    border-bottom: rgba(255,255,255,0.5) solid 10px;
+}
+
+.elementCorelDetails {
+}
+
+.elementCoreImgWrapper {
     flex: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.elementScrollImgWrapper > img {
-    display: none;
+.elementCoreImgWrapper > img {
+    width: 50%;
 }
 
-.elementScrollDetails {
-    flex:3;
-}
-
-.elementScrollTitle {
-    font-family: 'blokletters-bold', sans-serif;
-    color: black;
-    text-align: center;
-    font-size: 3.5em;
-    margin:0;
-    background-color: rgba(255,255,255,0.7);
-    border-radius: 40px 40px 0 0;
-    border-bottom: rgba(255,255,255,0.5) solid 10px;
-}
-
-.elementScrollDescription {
+.elementCoreDescription {
     font-family: 'caroni', sans-serif;
     color: white;
     text-align: justify;
@@ -254,14 +272,8 @@ div.scroller {
     height:750px;
     overflow-y: scroll;
     margin:0;
+    display: none;
 }
-
-.elementScrollDescription > img {
-    float: left;
-    padding-right: 20px;
-    width: 35%;
-}
-
 
 
 /*
