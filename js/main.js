@@ -241,7 +241,7 @@ function setEventsOnDynamicElements() {
     */
     let bookSummaryTag = $("#bookSummary");
     let bookDetailsWrapperTag = $("#bookZoomWrapper");
-    let bookCoverTag = $(".bookZoomLink");
+    let bookCoverTag = $(".bookLink");
     let selectedBookTag = $("#bookCover");
     let bookTitleTag = $("#bookTitle");
     let bookInfosList = $("#bookInfosList");

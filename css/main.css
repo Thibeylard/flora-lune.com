@@ -71,6 +71,10 @@ section#page {
     position: absolute;
 }
 
+#addaCover {
+    display: none;
+}
+
 header nav {
     display:none;
 }
@@ -89,14 +93,17 @@ p {
     width: 80%;
 }
 
-.pepita_title {
+.pepita_title, .pepita_book_title {
     font-family: 'pepita-script', sans-serif;
     color: white;
     font-size: 5em;
     margin: 5px 5px 5px auto;
     font-weight: normal;
-    width: 80%;
     text-align: center;
+}
+
+.pepita_title {
+    width: 80%;
 }
 
 
@@ -163,20 +170,20 @@ section#books {
     text-align: center;
 }
 
-.bookZoomLink, #bookCover {
+.bookLink, #bookCover {
     border: 2px solid white;
     opacity: 1;
     border-radius: 0 30px 30px 0;
 }
 
-.bookZoomLink {
+.bookLink {
     width: 70%;
     max-width: 500px;
     transition: 0.3s;
     margin-top: 0;
 }
 
-.bookZoomLink:hover {
+.bookLink:hover {
     cursor: pointer;
     opacity: 0.7;
     transition: 0.3s;
