@@ -320,6 +320,56 @@ section#characters {
 }
 
 
+/* The Modal (background) */
+
+#mobileElementModal {
+    display: none;
+    flex-direction: column;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+}
+
+#modalTitle {
+    flex: 1;
+    color: white;
+    text-align: center;
+    font-size: 5em;
+}
+
+#modalDescription {
+    flex: 10;
+    color: white;
+    margin: 10px;
+    text-align: justify;
+    font-size: 2.5em;
+}
+
+
+/* The Close Button */
+
+.closeBar {
+    flex: 1;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
 /*
 =============================================================================
 ------------------------------------------------------------------------ WRITINGS SECTION

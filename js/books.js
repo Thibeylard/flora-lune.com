@@ -66,3 +66,14 @@ function isMaxScrollRight(slideshow) {
 function isMaxScrollLeft(slideshow) {
     return ($(slideshow).css('--current-slide-index') == 0);
 }
+
+
+// When the user clicks on the button, open the modal
+$('.elementCoreImgWrapper').click(function() {
+    $('#mobileElementModal').css('display', "flex");
+});
+
+// When the user clicks on <span> (x), close the modal
+$(".closeBar > span").click(function() {
+    $('#mobileElementModal').css('display', "none");
+});
