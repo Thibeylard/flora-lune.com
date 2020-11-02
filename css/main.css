@@ -215,6 +215,10 @@ section#books {
 ------------------------------------------------------------------------ Book Page
 */
 
+section#characters{
+    text-align: center;
+}
+
 .slideshow {
     display: flex;
     flex-wrap: nowrap;
@@ -226,9 +230,10 @@ section#books {
 .slideshowElementWrapper {
     display: flex;
     flex:none;
-    width:100%;
+    width:90%;
     text-align: center;
     position:relative;
+    margin: 0 5% 0 5%;
 }
 
 .elementCoreWrapper {
@@ -236,27 +241,29 @@ section#books {
     display: flex;
     flex-direction: column;
     background-color: rgba(0,0,0,0.50);
+    border-radius: 40px;
+}
+
+.slideshowScrollersWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
 }
 
 .elementScrollLeft, .elementScrollRight {
-    flex:0.2;
+    flex:1;
     background-color: rgba(255,255,255,0.5);
-    width: 20px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.elementScrollRight {
-    border-radius: 0 20px 20px 0;
-}
-
-.elementScrollLeft {
-    border-radius: 20px 0 0 20px;
+    margin : 0 1% 0 1%;
+    border-radius: 20px;
 }
 
 .elementScrollLeft > img, .elementScrollRight > img{
-    width: 50%;
+    height:50px
 }
 
 .elementCoreTitle {
@@ -323,6 +330,7 @@ div.writingBarBody {
     display: flex;
     max-width: 900px;
     height: 109px;
+    align-items: center;
     background-image: url("../img/bookmarkBody.png");
 }
 
