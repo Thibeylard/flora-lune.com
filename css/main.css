@@ -40,11 +40,13 @@
     font-style: normal;
 }
 
+
 /*
 =============================================================================
 ------------------------------------------------------------------------ SMARTPHONES
 =============================================================================
 */
+
 body {
     background-image: url("../img/starsky.jpg");
     background-repeat: no-repeat;
@@ -52,7 +54,8 @@ body {
     background-size: cover;
 }
 
-header, section#page {
+header,
+section#page {
     display: inline-block;
 }
 
@@ -76,14 +79,15 @@ section#page {
 }
 
 header nav {
-    display:none;
+    display: none;
 }
 
 p {
     text-align: justify;
 }
 
-.blokletter_title, .book_title {
+.blokletter_title,
+.book_title {
     font-family: 'blokletters-thin', sans-serif;
     color: white;
     font-weight: bold;
@@ -101,7 +105,8 @@ p {
     font-size: 3.5em;
 }
 
-.pepita_title, .pepita_book_title {
+.pepita_title,
+.pepita_book_title {
     font-family: 'pepita-script', sans-serif;
     color: white;
     font-size: 5em;
@@ -124,7 +129,7 @@ p {
 }
 
 .bookSynopsisWrapper {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .handdrawn {
@@ -143,7 +148,6 @@ p {
     width: 80%;
 }
 
-
 div#credits {
     width: 50%;
     font-size: 0.7em;
@@ -152,6 +156,7 @@ div#credits {
     border: 1px dashed white;
     color: white;
 }
+
 
 /*
 =============================================================================
@@ -164,7 +169,7 @@ section#introduction {
     text-align: right;
 }
 
-section#introduction > * {
+section#introduction>* {
     display: inline-block;
     vertical-align: top;
 }
@@ -176,9 +181,10 @@ section#introduction p {
     text-align: justify;
 }
 
-#socialMediaWrapper > * {
+#socialMediaWrapper>* {
     display: none;
 }
+
 
 /*
 =============================================================================
@@ -190,7 +196,8 @@ section#books {
     text-align: center;
 }
 
-.bookLink, #bookCover {
+.bookLink,
+#bookCover {
     border: 2px solid white;
     opacity: 1;
     border-radius: 0 30px 30px 0;
@@ -211,11 +218,12 @@ section#books {
     margin-top: -10px;
 }
 
+
 /*
 ------------------------------------------------------------------------ Book Page
 */
 
-section#characters{
+section#characters {
     text-align: center;
 }
 
@@ -223,24 +231,24 @@ section#characters{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    margin-top : 20px;
-    margin-bottom : 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .slideshowElementWrapper {
     display: flex;
-    flex:none;
-    width:90%;
+    flex: none;
+    width: 90%;
     text-align: center;
-    position:relative;
+    position: relative;
     margin: 0 5% 0 5%;
 }
 
 .elementCoreWrapper {
-    flex:auto;
+    flex: auto;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0,0,0,0.50);
+    background-color: rgba(0, 0, 0, 0.50);
     border-radius: 40px;
 }
 
@@ -251,19 +259,21 @@ section#characters{
     margin: auto;
 }
 
-.elementScrollLeft, .elementScrollRight {
-    flex:1;
-    background-color: rgba(255,255,255,0.5);
+.elementScrollLeft,
+.elementScrollRight {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.5);
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin : 0 1% 0 1%;
+    margin: 0 1% 0 1%;
     border-radius: 20px;
 }
 
-.elementScrollLeft > img, .elementScrollRight > img{
-    height:50px
+.elementScrollLeft>img,
+.elementScrollRight>img {
+    height: 50px
 }
 
 .elementCoreTitle {
@@ -272,14 +282,13 @@ section#characters{
     color: white;
     text-align: center;
     font-size: 3.5em;
-    margin:0;
-    border-bottom: rgba(255,255,255,0.5) solid 10px;
+    margin: 0;
+    border-bottom: rgba(255, 255, 255, 0.5) solid 10px;
 }
 
 .elementImgWrapper {
     display: none;
 }
-
 
 .elementCoreImgWrapper {
     flex: 0;
@@ -288,7 +297,7 @@ section#characters{
     justify-content: center;
 }
 
-.elementCoreImgWrapper > img {
+.elementCoreImgWrapper>img {
     width: 50%;
 }
 
@@ -298,9 +307,9 @@ section#characters{
     text-align: justify;
     font-size: 4em;
     padding: 1% 2% 1% 2%;
-    height:750px;
+    height: 750px;
     overflow-y: scroll;
-    margin:0;
+    margin: 0;
     display: none;
 }
 
@@ -354,7 +363,6 @@ span.writingTitle {
 
 .writingButton {
     flex: initial;
-    align-self: center;
     justify-self: flex-end;
     margin: 0 15px 10px 15px;
     max-width: 75px;
@@ -373,7 +381,9 @@ p.writingSummary {
     padding: 20px;
     background-color: #4a635e;
     box-shadow: 0 15px rgba(0, 0, 0, 0.5);
+    --is-down: false;
 }
+
 
 /*
 =============================================================================
@@ -409,6 +419,7 @@ section#author p {
     cursor: pointer;
 }
 
+
 /*
 =============================================================================
 ------------------------------------------------------------------------ SUPPORT SECTION
@@ -421,7 +432,7 @@ section#author p {
     margin: auto;
 }
 
-#supportBlock > * {
+#supportBlock>* {
     vertical-align: top;
 }
 
@@ -437,7 +448,7 @@ section#author p {
 }
 
 #tipeeeSupport {
-    height:250px;
+    height: 250px;
 }
 
 img.supportLink {
@@ -449,15 +460,17 @@ img.supportLink:hover {
     cursor: pointer;
 }
 
-#supportTitle, #supportDescription, span.writingTitle, p.writingSummary {
+#supportTitle,
+#supportDescription,
+span.writingTitle,
+p.writingSummary {
     font-family: 'lilly', sans-serif;
     color: antiquewhite;
 }
 
 #supportDescription {
-    display:none;
+    display: none;
 }
-
 
 
 /*
@@ -465,36 +478,31 @@ img.supportLink:hover {
 ------------------------------------------------------------------------ LAPTOP
 =============================================================================
 */
-@media all and (min-device-width: 768px){
+
+@media all and (min-device-width: 768px) {
     section#page {
         width: 80%;
         margin-left: 20%;
     }
-
     #logo {
         position: fixed;
     }
-
     header nav {
         display: block;
         position: fixed;
         left: -30px;
         top: 260px;
     }
-
-
     .pencils {
         display: block;
         width: 250px;
         margin: -5px -5px -5px -40px;
         padding: 0;
     }
-
     .pencilLabels:hover {
         color: orangered;
         cursor: pointer;
     }
-
     .pencilLabels {
         font-family: 'blokletters-regular', sans-serif;
         position: relative;
@@ -505,7 +513,6 @@ img.supportLink:hover {
         margin: 0;
         padding: 0;
     }
-
     .blokletter_title {
         text-align: right;
         font-size: 4em;
@@ -513,136 +520,107 @@ img.supportLink:hover {
         margin: 5px;
         width: 80%;
     }
-
     .pepita_title {
         font-size: 6em;
         margin: 10px;
     }
-
-
     .handdrawn {
         font-size: 2.2em;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------INTRODUCTION SECTION
     =============================================================================
     */
-
     section#introduction p {
         width: 65%;
     }
-
-    #socialMediaWrapper > * {
+    #socialMediaWrapper>* {
         display: block;
         width: 80px;
         height: 80px;
         margin-bottom: 15px;
     }
-
     .socialMediaIcon:hover {
         filter: brightness(1.4);
         cursor: pointer;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------BOOK SECTION
     =============================================================================
     */
-
     /*
     ------------------------------------------------------------------------ Book Zoom
     */
-
     #bookCoverWrapper {
         flex: 5;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     #bookCover {
         display: inline-block;
         max-height: 600px;
     }
-
     #bookTitle {
         font-size: 2.5em;
     }
-
     #bookButtonWrapper img {
         max-width: 60px;
     }
-
     #bookSummary {
         text-align: justify;
         height: 70%;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ WRITINGS SECTION
     =============================================================================
     */
-
-
-
     section#writings img.writingButton {
         margin: 0 10px 10px 10px;
         max-width: 60px;
     }
-
     p.writingSummary {
         width: 100%;
         z-index: -1;
         font-size: 1em;
         max-width: 700px;
     }
-
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ AUTHOR SECTION
     =============================================================================
     */
-
     section#author aside img {
         width: 70%;
     }
-
     .bookReference {
         font-size: 0.7em;
     }
-
-
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ SUPPORT SECTION
     =============================================================================
     */
-
     #supportLinks {
         width: 40%;
     }
-
-    img.supportLink, #tipeeeSupport {
+    img.supportLink,
+    #tipeeeSupport {
         margin: 25px 12px 0 13px;
-        height:100px;
+        height: 100px;
     }
-
-    img.supportLink:hover, #tipeeeSupport:hover {
-        margin:0;
-        height:125px;
+    img.supportLink:hover,
+    #tipeeeSupport:hover {
+        margin: 0;
+        height: 125px;
     }
-
     #descriptionLinks {
         display: inline-block;
         width: 55%
     }
-
     #supportDescription {
         display: inline-block;
         width: 100%;
