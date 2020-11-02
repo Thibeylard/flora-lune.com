@@ -119,126 +119,13 @@ const bookInfos = {
 
 
 /*
------------------------------------------------------------------------- Page html generation
+------------------------------------------------------------------------ GLOBAL
 */
 
 $(document).ready(function() {
     selectSupportLink($(".supportLink[alt=tipeeeLink]")); // Select Tipeee support Link as default.
-
-    setEventsOnDynamicElements();
 });
 
-
-function setEventsOnDynamicElements() {
-
-    /*
-    ----------- Book cover click event
-    */
-    let bookSummaryTag = $("#bookSummary");
-    let bookDetailsWrapperTag = $("#bookZoomWrapper");
-    let bookCoverTag = $(".bookLink");
-    let selectedBookTag = $("#bookCover");
-    let bookTitleTag = $("#bookTitle");
-    let bookInfosList = $("#bookInfosList");
-    let currentBookId;
-
-    bookCoverTag.click(function() {
-        currentBookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
-
-        // Prevent back scrolling when book displayed
-        $("body").css({ 'overflow': 'hidden' });
-
-        bookDetailsWrapperTag.css("display", "flex");
-        selectedBookTag.attr("src", bookCovers[currentBookId]);
-        bookTitleTag.html(bookTitles[currentBookId]);
-
-        let selectedBookInfos = bookInfos[currentBookId];
-        let htmlInfos = "";
-        for (let key of Object.keys(selectedBookInfos)) {
-            if (key === "synopsis") {
-                htmlInfos += "<option selected>" + key.toString()[0].toUpperCase() + key.toString().substring(1, key.length) + "</option>";
-            } else {
-                htmlInfos += "<optgroup label='" + key.toString().toUpperCase() + "'>";
-                for (let categoryKey of Object.keys(selectedBookInfos[key])) {
-                    htmlInfos += "<option>" + categoryKey.toString()[0].toUpperCase() + categoryKey.toString().substring(1, categoryKey.length) + "</option>";
-                }
-                htmlInfos += "</optgroup>";
-            }
-        }
-        bookSummaryTag.html(selectedBookInfos['synopsis']);
-        bookInfosList.html(htmlInfos);
-    });
-
-    // This event handler form support dynamic elements
-    bookInfosList.change(function(e) {
-        let optionSelected = $("option:selected", this);
-        let selectedBookInfos = bookInfos[currentBookId];
-        let categoryArray;
-        let found = false;
-        for (let category of Object.keys(selectedBookInfos)) {
-            if (category !== "synopsis") {
-                categoryArray = selectedBookInfos[category];
-                for (let categoryKey of Object.keys(categoryArray)) {
-                    if (categoryKey === optionSelected.val().toLowerCase()) {
-                        bookSummaryTag.html(categoryArray[categoryKey]);
-                        found = true;
-                        break;
-                    }
-                }
-                if (found) {
-                    break;
-                }
-            } else if ("synopsis" === optionSelected.val().toLowerCase()) {
-                bookSummaryTag.html(selectedBookInfos[category]);
-                break;
-            }
-        }
-        bookSummaryTag.scrollTop(0);
-    });
-
-
-    bookCoverTag.click(function() {
-        currentBookId = $(this).attr("id").split("_")[0]; // attribut id = idRoman_cover
-
-        // Prevent back scrolling when book displayed
-        $("body").css({ 'overflow': 'hidden' });
-
-        bookDetailsWrapperTag.css("display", "flex");
-        selectedBookTag.attr("src", bookCovers[currentBookId]);
-        bookTitleTag.html(bookTitles[currentBookId]);
-        let selectedBookInfos = bookInfos[currentBookId];
-        let htmlInfos = "";
-        let infoId = "";
-        for (let key of Object.keys(selectedBookInfos)) {
-            infoId = key + "_infoLink";
-            if (key === "synopsis") {
-                htmlInfos += "<a href='#' class='bookInfoLink bookInfoLinkSelected' id='" + infoId + "'>";
-            } else {
-                htmlInfos += "<a href='#' class='bookInfoLink' id='" + infoId + "'>";
-            }
-            htmlInfos += "@" + key;
-            htmlInfos += "</a> ";
-        }
-        bookSummaryTag.html(selectedBookInfos['synopsis']);
-        bookInfosTag.html(htmlInfos);
-    });
-
-    /*
-    -------------- Details Button 
-    */
-    $(".detailsButton").click(function() {
-        let writing = $(this).closest('.writing');
-        let writingSummary = $(writing).children('.writingSummary').first();
-
-        if ($(writingSummary).css('--is-down') === 'true') {
-            $(writingSummary).css('--is-down', 'false');
-            writingSummary.slideUp();
-        } else {
-            $(writingSummary).css('--is-down', 'true');
-            writingSummary.slideDown();
-        }
-    });
-}
 
 /*
 =============================================================================
@@ -247,7 +134,7 @@ function setEventsOnDynamicElements() {
 */
 
 /*
-------------------------------------------------------------------------Header elements events
+--------------------------------------------------------- HEADER Events
 */
 let navPencils = $(".pencils");
 let pencilTexts = $(".pencilLabels");
@@ -278,22 +165,29 @@ pencilTexts.click(function(e) { // Nav button click event : Scroll to according 
 });
 
 /*
------------------------------------------------------------------------- Book static elements events
+------------------------------------------------------------ WRITINGS events
 */
+/*
+-------------- Details Button 
+*/
+$(".detailsButton").click(function() {
+    let writing = $(this).closest('.writing');
+    let writingSummary = $(writing).children('.writingSummary').first();
 
-// Get the <span> element that closes the modal
-let span = $("#closeBookZoom");
-
-// When the user clicks on <span> (x), close the modal
-span.click(function() {
-    $("#bookZoomWrapper").css("display", "none");
-    $("body").css({ 'overflow': 'scroll' });
+    if ($(writingSummary).css('--is-down') === 'true') {
+        $(writingSummary).css('--is-down', 'false');
+        writingSummary.slideUp();
+    } else {
+        $(writingSummary).css('--is-down', 'true');
+        writingSummary.slideDown();
+    }
 });
 
 /*
-------------------------------------------------------------------------Support elements events
+------------------------------------------------------------ SUPPORT events
 */
 let supportLinks = $(".supportLink");
+
 supportLinks.hover(
     function() {
         selectSupportLink($(this));
@@ -313,17 +207,18 @@ function socialMediaLink(el) {
     window.location.href = supportLinkDestination[el.attr("alt")];
 }
 
-
-
 function selectSupportLink(linkSelector) {
     let linkAlt = linkSelector.attr("alt");
-    /* linkSelector.css("height", "125px");
-     linkSelector.css("margin", "0");
+    $(linkSelector).css('height', $(linkSelector).css('--focus-height'));
+    $(linkSelector).css('margin', $(linkSelector).css('--focus-margin'));
 
-     let otherLinks = $(`.supportLink[alt!=${linkAlt}]`);
+    $(".supportLink").each(function(index, element) {
+        if ($(this).attr("alt") !== linkAlt) {
+            $(this).css('height', $(this).css('--unfocus-height'));
+            $(this).css('margin', $(this).css('--unfocus-margin'));
+        }
+    });
 
-     otherLinks.css("margin", "25px 12px 0 13px");
-     otherLinks.css("height", "100px");*/
-
-    $("#supportDescription").html(supportLinkDescription[linkAlt]);
+    let des = $("#supportDescription")
+    des.html(supportLinkDescription[linkAlt]);
 }

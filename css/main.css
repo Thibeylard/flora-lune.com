@@ -47,6 +47,10 @@
 =============================================================================
 */
 
+:root {
+    --responsive-state: smartphone;
+}
+
 body {
     background-image: url("../img/starsky.jpg");
     background-repeat: no-repeat;
@@ -480,6 +484,9 @@ p.writingSummary {
 */
 
 @media all and (min-device-width: 768px) {
+     :root {
+        --responsive-state: laptop;
+    }
     section#page {
         width: 80%;
         margin-left: 20%;
@@ -611,11 +618,10 @@ p.writingSummary {
     #tipeeeSupport {
         margin: 25px 12px 0 13px;
         height: 100px;
-    }
-    img.supportLink:hover,
-    #tipeeeSupport:hover {
-        margin: 0;
-        height: 125px;
+        --focus-height: 125px;
+        --focus-margin: 0;
+        --unfocus-height: 100px;
+        --unfocus-margin: 25px 12px 0 13px;
     }
     #descriptionLinks {
         display: inline-block;
@@ -626,7 +632,7 @@ p.writingSummary {
         width: 100%;
         height: 200px;
         margin: auto;
-        font-size: 1.3em;
+        font-size: 1.1em;
         margin-bottom: 40px;
         border-radius: 10px 50px 10px 50px;
         padding: 20px;
