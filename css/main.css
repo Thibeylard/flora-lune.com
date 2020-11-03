@@ -433,6 +433,10 @@ span.writingTitle {
     max-width: 75px;
 }
 
+.detailsButton {
+    display: none;
+}
+
 p.writingSummary {
     display: none;
     position: relative;
@@ -689,6 +693,10 @@ p.writingSummary {
         z-index: -1;
         font-size: 1em;
         max-width: 900px;
+    }
+
+    .detailsButton {
+        display: initial;
     }
 
     /*

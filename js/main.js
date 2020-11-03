@@ -99,6 +99,21 @@ $(".detailsButton").click(function() {
     }
 });
 
+$(".writingTitle").click(function() {
+    if($(':root').css('--responsive-state') === " smartphone") {
+        let writing = $(this).closest('.writing');
+        let writingSummary = $(writing).children('.writingSummary').first();
+
+        if ($(writingSummary).css('--is-down') === 'true') {
+            $(writingSummary).css('--is-down', 'false');
+            writingSummary.slideUp();
+        } else {
+            $(writingSummary).css('--is-down', 'true');
+            writingSummary.slideDown();
+        }
+    }
+});
+
 /*
 ------------------------------------------------------------ SUPPORT events
 */
