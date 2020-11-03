@@ -513,11 +513,11 @@ section#author p {
 }
 
 #tipeeeSupport {
-    height: 250px;
+    height: 280px;
 }
 
 img.supportLink {
-    height: 180px;
+    height: 200px;
     margin: 25px 12px 0 13px;
 }
 
@@ -715,12 +715,12 @@ p.writingSummary {
 
     img.supportLink,
     #tipeeeSupport {
-        margin: 25px 12px 0 13px;
-        height: 100px;
-        --focus-height: 125px;
+        margin: 15px 2px 0 3px;
+        height: 80px;
+        --focus-height: 105px;
         --focus-margin: 0;
-        --unfocus-height: 100px;
-        --unfocus-margin: 25px 12px 0 13px;
+        --unfocus-height: 80px;
+        --unfocus-margin: 15px 2px 0 3px;
     }
 
     #descriptionLinks {
@@ -733,8 +733,7 @@ p.writingSummary {
         width: 100%;
         height: 200px;
         margin: auto;
-        font-size: 1.1em;
-        margin-bottom: 40px;
+        font-size: 1em;
         border-radius: 10px 50px 10px 50px;
         padding: 20px;
         background-color: #374845;
@@ -781,5 +780,28 @@ p.writingSummary {
 
     p.writingSummary {
         width: 90%;
+    }
+
+    /*
+=============================================================================
+------------------------------------------------------------------------ SUPPORT SECTION
+=============================================================================
+*/
+    #supportLinks {
+        width: 40%;
+    }
+
+    img.supportLink,
+    #tipeeeSupport {
+        margin: 25px 12px 0 13px;
+        height: 155px;
+        --focus-height: 155px;
+        --focus-margin: 0;
+        --unfocus-height: 100px;
+        --unfocus-margin: 25px 12px 0 13px;
+    }
+
+    #supportDescription {
+        font-size: 1.3em;
     }
 }
