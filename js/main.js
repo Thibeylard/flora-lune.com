@@ -72,10 +72,12 @@ pencilTexts.hover(
     });
 
 pencilTexts.click(function(e) { // Nav button click event : Scroll to according section when clicked.
-    e.preventDefault();
-    let destinationId = $(this).attr("href");
-    let destination = $(`section${destinationId}`);
-    $('html,body').animate({ scrollTop: destination.offset().top - 40 }, 'slow');
+    if(!$(this).hasClass("backLink")){
+        e.preventDefault();
+        let destinationId = $(this).attr("href");
+        let destination = $(`section${destinationId}`);
+        $('html,body').animate({ scrollTop: destination.offset().top - 40 }, 'slow');
+    }
 });
 
 /*

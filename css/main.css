@@ -56,20 +56,20 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    vertical-align: middle;
 }
+
 
 header,
 section#page {
-    display: inline-block;
+    height: 100%;
 
 }
 
-.mainHeader {
+header {
     vertical-align: top;
 }
 
-.mainHeader nav {
+header nav {
     display: none;
 }
 
@@ -101,8 +101,19 @@ p {
 }
 
 .book_title {
-    margin: 5%;
+    margin: 5% 5% 1% 5%;
     font-size: 5em;
+}
+
+
+
+.mainLink {
+    text-align: center;
+    color: white;
+    opacity: 70%;
+    text-decoration: underline;
+    margin: 0 0 4% 0;
+    font-family: caroni, sans-serif;
 }
 
 .blokletter_title {
@@ -210,10 +221,10 @@ section#books {
 }
 
 .bookLink {
+    margin-top: 30px;
     width: 70%;
     max-width: 500px;
     transition: 0.3s;
-    margin-top: 0;
 }
 
 .bookLink:hover {
@@ -300,11 +311,11 @@ section#characters {
     align-items: center;
     justify-content: center;
     height: 600px;
-    opacity: 85%;
 }
 
 .elementCoreImgWrapper > img {
     height: 100%;
+    opacity: 75%;
 }
 
 .elementCoreDescription {
@@ -541,26 +552,24 @@ p.writingSummary {
 
     section#page {
         width: 80%;
+        margin-left: 20%;
     }
 
     #logo {
         position: fixed;
     }
 
-    .bookHeader {
-        width: 19%;
-    }
-
     .bookCover {
         display: block;
-        width: 100%;
+        position: fixed;
+        height: 30vh;
     }
 
-    .mainHeader nav {
+    header nav {
         display: block;
         position: fixed;
         left: -30px;
-        top: 260px;
+        top: 40vh;
     }
 
     .pencils {
