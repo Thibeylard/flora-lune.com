@@ -71,7 +71,7 @@ function isMaxScrollLeft(slideshow) {
 // When the user clicks on the button, open the modal
 $('.elementCoreImgWrapper').click(function() {
     console.log($(':root').css('--responsive-state'));
-    if($(':root').css('--responsive-state') === "smartphone") {
+    if($(':root').css('--responsive-state') === " smartphone") {
         $("body").css({'overflow': 'hidden'});
         let selectedElementDetails = $(this).closest('.elementCoreDetails').first();
         let selectedElementTitle = $(selectedElementDetails).siblings('.elementCoreTitle').first();

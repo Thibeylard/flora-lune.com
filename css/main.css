@@ -439,7 +439,7 @@ p.writingSummary {
     bottom: 16px;
     width: 90%;
     z-index: -1;
-    font-size: 0.8em;
+    font-size: 2em;
     margin-left: auto;
     margin-top: auto;
     border-radius: 0 0 30px 30px;
