@@ -91,6 +91,20 @@ p {
     text-align: justify;
 }
 
+a.backButton {
+    color: white;
+    text-decoration: none;
+    font-size: 8em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+a.backButton:visited, a.backButton:hover {
+    text-decoration: none;
+    color: white;
+}
+
 .blokletter_title,
 .book_title {
     font-family: 'blokletters-thin', sans-serif;
@@ -565,6 +579,10 @@ p.writingSummary {
         display: block;
         position: fixed;
         height: 30vh;
+    }
+
+    a.backButton {
+        display: none;
     }
 
     header nav {
