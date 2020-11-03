@@ -341,21 +341,24 @@ section#characters {
     /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     /* Black w/ opacity */
 }
 
 #modalTitle {
     flex: 1;
     color: white;
+    font-family: lilly, sans-serif;
     text-align: center;
     font-size: 5em;
 }
 
 #modalDescription {
     flex: 10;
+    font-family: caroni, sans-serif;
     color: white;
-    margin: 10px;
+    margin: auto;
+    width: 90%;
     text-align: justify;
     font-size: 2.5em;
 }
@@ -363,11 +366,16 @@ section#characters {
 
 /* The Close Button */
 
-.closeBar {
+#closeBar {
     flex: 1;
-    color: #aaa;
-    font-size: 28px;
+    color: white;
+    font-size: 6em;
     font-weight: bold;
+    text-align: right;
+}
+
+#closeBar > span {
+    margin: 0 2% 0 1%;
 }
 
 

@@ -60,20 +60,30 @@ function setArrows() {
 }
 
 function isMaxScrollRight(slideshow) {
-    return ($(slideshow).css('--current-slide-index') == Number.parseInt($(slideshow).css('--max-slide-index')));
+    return (Number.parseInt($(slideshow).css('--current-slide-index')) === Number.parseInt($(slideshow).css('--max-slide-index')));
 }
 
 function isMaxScrollLeft(slideshow) {
-    return ($(slideshow).css('--current-slide-index') == 0);
+    return (Number.parseInt($(slideshow).css('--current-slide-index')) === 0);
 }
 
 
 // When the user clicks on the button, open the modal
 $('.elementCoreImgWrapper').click(function() {
+    $("body").css({'overflow': 'hidden'});
+    let selectedElementDetails = $(this).closest('.elementCoreDetails').first();
+    let selectedElementTitle = $(selectedElementDetails).siblings('.elementCoreTitle').first();
+    let selectedElementDescription = $(selectedElementDetails).children('.elementCoreDescription').first();
+
+    console.log($(selectedElementTitle).text());
+    console.log($(selectedElementDescription).text());
     $('#mobileElementModal').css('display', "flex");
+    $('#modalTitle').html($(selectedElementTitle).html());
+    $('#modalDescription').html($(selectedElementDescription).html());
 });
 
 // When the user clicks on <span> (x), close the modal
-$(".closeBar > span").click(function() {
+$("#closeBar > span").click(function() {
+    $("body").css({'overflow': 'scroll'});
     $('#mobileElementModal').css('display', "none");
 });
