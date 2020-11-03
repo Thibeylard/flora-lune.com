@@ -70,16 +70,17 @@ function isMaxScrollLeft(slideshow) {
 
 // When the user clicks on the button, open the modal
 $('.elementCoreImgWrapper').click(function() {
-    $("body").css({'overflow': 'hidden'});
-    let selectedElementDetails = $(this).closest('.elementCoreDetails').first();
-    let selectedElementTitle = $(selectedElementDetails).siblings('.elementCoreTitle').first();
-    let selectedElementDescription = $(selectedElementDetails).children('.elementCoreDescription').first();
+    console.log($(':root').css('--responsive-state'));
+    if($(':root').css('--responsive-state') === "smartphone") {
+        $("body").css({'overflow': 'hidden'});
+        let selectedElementDetails = $(this).closest('.elementCoreDetails').first();
+        let selectedElementTitle = $(selectedElementDetails).siblings('.elementCoreTitle').first();
+        let selectedElementDescription = $(selectedElementDetails).children('.elementCoreDescription').first();
 
-    console.log($(selectedElementTitle).text());
-    console.log($(selectedElementDescription).text());
-    $('#mobileElementModal').css('display', "flex");
-    $('#modalTitle').html($(selectedElementTitle).html());
-    $('#modalDescription').html($(selectedElementDescription).html());
+        $('#mobileElementModal').css('display', "flex");
+        $('#modalTitle').html($(selectedElementTitle).html());
+        $('#modalDescription').html($(selectedElementDescription).html());
+    }
 });
 
 // When the user clicks on <span> (x), close the modal

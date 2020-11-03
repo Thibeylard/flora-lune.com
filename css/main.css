@@ -48,7 +48,7 @@
 */
 
 :root {
-    --responsive-state: smartphone;
+    --responsive-state:smartphone;
 }
 
 body {
@@ -56,34 +56,35 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    vertical-align: middle;
 }
 
 header,
 section#page {
     display: inline-block;
+
 }
 
-header {
+.mainHeader {
     vertical-align: top;
-    width: 20%;
+}
+
+.mainHeader nav {
+    display: none;
 }
 
 section#page {
     width: 100%;
 }
 
+.bookCover {
+    display: none;
+}
+
 #logo {
     width: 250px;
     height: 250px;
     position: absolute;
-}
-
-#addaCover {
-    display: none;
-}
-
-header nav {
-    display: none;
 }
 
 p {
@@ -173,7 +174,7 @@ section#introduction {
     text-align: right;
 }
 
-section#introduction>* {
+section#introduction > * {
     display: inline-block;
     vertical-align: top;
 }
@@ -185,7 +186,7 @@ section#introduction p {
     text-align: justify;
 }
 
-#socialMediaWrapper>* {
+#socialMediaWrapper > * {
     display: none;
 }
 
@@ -201,7 +202,8 @@ section#books {
 }
 
 .bookLink,
-#bookCover {
+#bookCover,
+.bookCover {
     border: 2px solid white;
     opacity: 1;
     border-radius: 0 30px 30px 0;
@@ -277,8 +279,8 @@ section#characters {
     border-radius: 20px;
 }
 
-.elementScrollLeft>img,
-.elementScrollRight>img {
+.elementScrollLeft > img,
+.elementScrollRight > img {
     height: 50px
 }
 
@@ -292,31 +294,20 @@ section#characters {
     border-bottom: rgba(255, 255, 255, 0.5) solid 10px;
 }
 
-.elementImgWrapper {
-    display: none;
-}
-
 .elementCoreImgWrapper {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    height:600px;
+    height: 600px;
+    opacity: 85%;
 }
 
-.elementCoreImgWrapper>img {
-    height:100%;
+.elementCoreImgWrapper > img {
+    height: 100%;
 }
 
 .elementCoreDescription {
-    font-family: 'caroni', sans-serif;
-    color: white;
-    text-align: justify;
-    font-size: 4em;
-    padding: 1% 2% 1% 2%;
-    height: 750px;
-    overflow-y: scroll;
-    margin: 0;
     display: none;
 }
 
@@ -402,7 +393,6 @@ div.writingBar {
 div.writingBarBody {
     flex: auto;
     display: flex;
-    max-width: 900px;
     height: 109px;
     align-items: center;
     background-image: url("../img/bookmarkBody.png");
@@ -497,7 +487,7 @@ section#author p {
     margin: auto;
 }
 
-#supportBlock>* {
+#supportBlock > * {
     vertical-align: top;
 }
 
@@ -545,32 +535,46 @@ p.writingSummary {
 */
 
 @media all and (min-device-width: 768px) {
-     :root {
+    :root {
         --responsive-state: laptop;
     }
+
     section#page {
         width: 80%;
-        margin-left: 20%;
     }
+
     #logo {
         position: fixed;
     }
-    header nav {
+
+    .bookHeader {
+        width: 19%;
+    }
+
+    .bookCover {
+        display: block;
+        width: 100%;
+    }
+
+    .mainHeader nav {
         display: block;
         position: fixed;
         left: -30px;
         top: 260px;
     }
+
     .pencils {
         display: block;
         width: 250px;
         margin: -5px -5px -5px -40px;
         padding: 0;
     }
+
     .pencilLabels:hover {
         color: orangered;
         cursor: pointer;
     }
+
     .pencilLabels {
         font-family: 'blokletters-regular', sans-serif;
         position: relative;
@@ -581,6 +585,7 @@ p.writingSummary {
         margin: 0;
         padding: 0;
     }
+
     .blokletter_title {
         text-align: right;
         font-size: 4em;
@@ -588,13 +593,16 @@ p.writingSummary {
         margin: 5px;
         width: 80%;
     }
+
     .pepita_title {
         font-size: 6em;
         margin: 10px;
     }
+
     .handdrawn {
         font-size: 2.2em;
     }
+
     /*
     =============================================================================
     ------------------------------------------------------------------------INTRODUCTION SECTION
@@ -603,44 +611,43 @@ p.writingSummary {
     section#introduction p {
         width: 65%;
     }
-    #socialMediaWrapper>* {
+
+    #socialMediaWrapper > * {
         display: block;
         width: 80px;
         height: 80px;
         margin-bottom: 15px;
     }
+
     .socialMediaIcon:hover {
         filter: brightness(1.4);
         cursor: pointer;
     }
+
     /*
     =============================================================================
     ------------------------------------------------------------------------BOOK SECTION
     =============================================================================
     */
     /*
-    ------------------------------------------------------------------------ Book Zoom
+    ------------------------------------------------------------------------ Book Page
     */
-    #bookCoverWrapper {
-        flex: 5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .elementCoreImgWrapper {
+        float: left;
     }
-    #bookCover {
-        display: inline-block;
-        max-height: 600px;
-    }
-    #bookTitle {
-        font-size: 2.5em;
-    }
-    #bookButtonWrapper img {
-        max-width: 60px;
-    }
-    #bookSummary {
+
+    .elementCoreDescription {
+        font-family: 'caroni', sans-serif;
+        color: white;
         text-align: justify;
-        height: 70%;
+        font-size: 2em;
+        padding: 1% 2% 1% 2%;
+        height: 500px;
+        overflow-y: scroll;
+        margin: 0;
+        display: block;
     }
+
     /*
     =============================================================================
     ------------------------------------------------------------------------ WRITINGS SECTION
@@ -650,12 +657,20 @@ p.writingSummary {
         margin: 0 10px 10px 10px;
         max-width: 60px;
     }
+
+    div.writingBar {
+        width: 90%;
+        margin-left: auto;
+    }
+
+
     p.writingSummary {
         width: 100%;
         z-index: -1;
         font-size: 1em;
-        max-width: 700px;
+        max-width: 900px;
     }
+
     /*
     =============================================================================
     ------------------------------------------------------------------------ AUTHOR SECTION
@@ -664,9 +679,11 @@ p.writingSummary {
     section#author aside img {
         width: 70%;
     }
+
     .bookReference {
         font-size: 0.7em;
     }
+
     /*
     =============================================================================
     ------------------------------------------------------------------------ SUPPORT SECTION
@@ -675,6 +692,7 @@ p.writingSummary {
     #supportLinks {
         width: 40%;
     }
+
     img.supportLink,
     #tipeeeSupport {
         margin: 25px 12px 0 13px;
@@ -684,10 +702,12 @@ p.writingSummary {
         --unfocus-height: 100px;
         --unfocus-margin: 25px 12px 0 13px;
     }
+
     #descriptionLinks {
         display: inline-block;
         width: 55%
     }
+
     #supportDescription {
         display: inline-block;
         width: 100%;
