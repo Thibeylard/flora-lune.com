@@ -48,7 +48,7 @@
 */
 
 :root {
-    --responsive-state:smartphone;
+    --responsive-state: smartphone;
 }
 
 body {
@@ -104,7 +104,6 @@ p {
     margin: 5% 5% 1% 5%;
     font-size: 5em;
 }
-
 
 
 .mainLink {
@@ -306,7 +305,7 @@ section#characters {
 }
 
 .elementCoreImgWrapper {
-    flex: 2;
+    flex: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -538,14 +537,13 @@ p.writingSummary {
     display: none;
 }
 
-
 /*
 =============================================================================
 ------------------------------------------------------------------------ LAPTOP
 =============================================================================
 */
 
-@media all and (min-device-width: 768px) {
+@media all and (min-device-width: 1024px) {
     :root {
         --responsive-state: laptop;
     }
@@ -643,9 +641,15 @@ p.writingSummary {
     */
     .elementCoreImgWrapper {
         float: left;
+        flex: 2;
+    }
+
+    .elementCoreImgWrapper > img {
+        height: 50%;
     }
 
     .elementCoreDescription {
+        flex: 2;
         font-family: 'caroni', sans-serif;
         color: white;
         text-align: justify;
@@ -655,6 +659,10 @@ p.writingSummary {
         overflow-y: scroll;
         margin: 0;
         display: block;
+    }
+
+    .bookSynopsis {
+        font-size: 2em;
     }
 
     /*
@@ -672,9 +680,12 @@ p.writingSummary {
         margin-left: auto;
     }
 
+    span.writingTitle {
+        font-size: 2em;
+    }
 
     p.writingSummary {
-        width: 100%;
+        width: 70%;
         z-index: -1;
         font-size: 1em;
         max-width: 900px;
@@ -728,5 +739,47 @@ p.writingSummary {
         padding: 20px;
         background-color: #374845;
         box-shadow: 0 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/*
+=============================================================================
+------------------------------------------------------------------------ LAPTOP L
+=============================================================================
+*/
+
+@media all and (min-device-width: 1440px) {
+    :root {
+        --responsive-state: laptop_l;
+    }
+
+    /*
+=============================================================================
+------------------------------------------------------------------------BOOK SECTION
+=============================================================================
+*/
+    /*
+    ------------------------------------------------------------------------ Book Page
+    */
+    .elementCoreImgWrapper > img {
+        height: 80%;
+    }
+
+
+    .bookSynopsis {
+        font-size: 3em;
+    }
+
+    /*
+    =============================================================================
+    ------------------------------------------------------------------------ WRITINGS SECTION
+    =============================================================================
+    */
+    span.writingTitle {
+        font-size: 3em;
+    }
+
+    p.writingSummary {
+        width: 90%;
     }
 }
