@@ -545,8 +545,8 @@ p.writingSummary {
     }
     .pencils {
         display: block;
-        width: 250px;
-        margin: -5px -5px -5px -40px;
+        width: 200px;
+        margin: -5px -5px -5px -30px;
         padding: 0;
     }
     .pencilLabels:hover {
@@ -560,7 +560,7 @@ p.writingSummary {
         text-decoration: none;
         font-size: 1.2em;
         left: 50px;
-        top: 25px;
+        top: 23px;
         margin: 0;
         padding: 0;
     }
