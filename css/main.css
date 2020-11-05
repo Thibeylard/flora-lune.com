@@ -13,27 +13,6 @@
 }
 
 @font-face {
-    font-family: 'blokletters-regular';
-    src: url('../fonts/blokletters-balpen.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'blokletters-bold';
-    src: url('../fonts/blokletters-viltstift.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'blokletters-thin';
-    src: url('../fonts/blokletters-potlood.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'pepita-script';
     src: url('../fonts/pepita_script_3_w01_regular.woff') format('woff');
     font-weight: normal;
@@ -58,11 +37,9 @@ body {
     background-size: cover;
 }
 
-
 header,
 section#page {
     height: 100%;
-
 }
 
 header {
@@ -93,7 +70,7 @@ p {
 
 .blokletter_title,
 .book_title {
-    font-family: 'blokletters-thin', sans-serif;
+    font-family: 'pepita-script', sans-serif;
     color: white;
     font-weight: bold;
     margin: 5px 5px 5px auto;
@@ -104,7 +81,6 @@ p {
     margin: 5% 5% 1% 5%;
     font-size: 5em;
 }
-
 
 .mainLink {
     text-align: center;
@@ -184,7 +160,7 @@ section#introduction {
     text-align: right;
 }
 
-section#introduction > * {
+section#introduction>* {
     display: inline-block;
     vertical-align: top;
 }
@@ -196,7 +172,7 @@ section#introduction p {
     text-align: justify;
 }
 
-#socialMediaWrapper > * {
+#socialMediaWrapper>* {
     display: none;
 }
 
@@ -289,17 +265,18 @@ section#characters {
     border-radius: 20px;
 }
 
-.elementScrollLeft > img,
-.elementScrollRight > img {
+.elementScrollLeft>img,
+.elementScrollRight>img {
     height: 50px
 }
 
 .elementCoreTitle {
     flex-direction: column;
-    font-family: 'blokletters-bold', sans-serif;
+    font-family: 'lilly', sans-serif;
     color: white;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 3em;
+    font-weight: normal;
     margin: 0;
     border-bottom: rgba(255, 255, 255, 0.5) solid 10px;
 }
@@ -312,7 +289,7 @@ section#characters {
     height: 600px;
 }
 
-.elementCoreImgWrapper > img {
+.elementCoreImgWrapper>img {
     height: 100%;
     opacity: 75%;
 }
@@ -375,7 +352,7 @@ section#characters {
     text-align: right;
 }
 
-#closeBar > span {
+#closeBar>span {
     margin: 0 2% 0 1%;
 }
 
@@ -497,7 +474,7 @@ section#author p {
     margin: auto;
 }
 
-#supportBlock > * {
+#supportBlock>* {
     vertical-align: top;
 }
 
@@ -537,6 +514,7 @@ p.writingSummary {
     display: none;
 }
 
+
 /*
 =============================================================================
 ------------------------------------------------------------------------ LAPTOP
@@ -544,55 +522,48 @@ p.writingSummary {
 */
 
 @media all and (min-device-width: 1024px) {
-    :root {
+     :root {
         --responsive-state: laptop;
     }
-
     section#page {
         width: 80%;
         margin-left: 20%;
     }
-
     #logo {
         position: fixed;
     }
-
     .bookCover {
         display: block;
         position: fixed;
         height: 30vh;
     }
-
     header nav {
         display: block;
         position: fixed;
         left: -30px;
         top: 40vh;
     }
-
     .pencils {
         display: block;
         width: 250px;
         margin: -5px -5px -5px -40px;
         padding: 0;
     }
-
     .pencilLabels:hover {
         color: orangered;
         cursor: pointer;
     }
-
     .pencilLabels {
-        font-family: 'blokletters-regular', sans-serif;
+        font-family: 'caroni', sans-serif;
         position: relative;
         color: black;
         text-decoration: none;
-        left: 40px;
-        top: 27px;
+        font-size: 1.2em;
+        left: 50px;
+        top: 25px;
         margin: 0;
         padding: 0;
     }
-
     .blokletter_title {
         text-align: right;
         font-size: 4em;
@@ -600,16 +571,13 @@ p.writingSummary {
         margin: 5px;
         width: 80%;
     }
-
     .pepita_title {
         font-size: 6em;
         margin: 10px;
     }
-
     .handdrawn {
         font-size: 2.2em;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------INTRODUCTION SECTION
@@ -618,19 +586,16 @@ p.writingSummary {
     section#introduction p {
         width: 65%;
     }
-
-    #socialMediaWrapper > * {
+    #socialMediaWrapper>* {
         display: block;
         width: 80px;
         height: 80px;
         margin-bottom: 15px;
     }
-
     .socialMediaIcon:hover {
         filter: brightness(1.4);
         cursor: pointer;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------BOOK SECTION
@@ -643,11 +608,9 @@ p.writingSummary {
         float: left;
         flex: 2;
     }
-
-    .elementCoreImgWrapper > img {
+    .elementCoreImgWrapper>img {
         height: 50%;
     }
-
     .elementCoreDescription {
         flex: 2;
         font-family: 'caroni', sans-serif;
@@ -660,11 +623,9 @@ p.writingSummary {
         margin: 0;
         display: block;
     }
-
     .bookSynopsis {
         font-size: 2em;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ WRITINGS SECTION
@@ -674,23 +635,19 @@ p.writingSummary {
         margin: 0 10px 10px 10px;
         max-width: 60px;
     }
-
     div.writingBar {
         width: 90%;
         margin-left: auto;
     }
-
     span.writingTitle {
         font-size: 2em;
     }
-
     p.writingSummary {
         width: 70%;
         z-index: -1;
         font-size: 1em;
         max-width: 900px;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ AUTHOR SECTION
@@ -699,11 +656,9 @@ p.writingSummary {
     section#author aside img {
         width: 70%;
     }
-
     .bookReference {
         font-size: 0.7em;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ SUPPORT SECTION
@@ -712,7 +667,6 @@ p.writingSummary {
     #supportLinks {
         width: 40%;
     }
-
     img.supportLink,
     #tipeeeSupport {
         margin: 15px 2px 0 3px;
@@ -722,12 +676,10 @@ p.writingSummary {
         --unfocus-height: 80px;
         --unfocus-margin: 15px 2px 0 3px;
     }
-
     #descriptionLinks {
         display: inline-block;
         width: 55%
     }
-
     #supportDescription {
         display: inline-block;
         width: 100%;
@@ -741,6 +693,7 @@ p.writingSummary {
     }
 }
 
+
 /*
 =============================================================================
 ------------------------------------------------------------------------ LAPTOP L
@@ -748,10 +701,9 @@ p.writingSummary {
 */
 
 @media all and (min-device-width: 1440px) {
-    :root {
+     :root {
         --responsive-state: laptop_l;
     }
-
     /*
 =============================================================================
 ------------------------------------------------------------------------BOOK SECTION
@@ -760,15 +712,12 @@ p.writingSummary {
     /*
     ------------------------------------------------------------------------ Book Page
     */
-    .elementCoreImgWrapper > img {
+    .elementCoreImgWrapper>img {
         height: 80%;
     }
-
-
     .bookSynopsis {
         font-size: 3em;
     }
-
     /*
     =============================================================================
     ------------------------------------------------------------------------ WRITINGS SECTION
@@ -777,11 +726,9 @@ p.writingSummary {
     span.writingTitle {
         font-size: 3em;
     }
-
     p.writingSummary {
         width: 90%;
     }
-
     /*
 =============================================================================
 ------------------------------------------------------------------------ SUPPORT SECTION
@@ -790,7 +737,6 @@ p.writingSummary {
     #supportLinks {
         width: 40%;
     }
-
     img.supportLink,
     #tipeeeSupport {
         margin: 25px 12px 0 13px;
@@ -800,7 +746,6 @@ p.writingSummary {
         --unfocus-height: 100px;
         --unfocus-margin: 25px 12px 0 13px;
     }
-
     #supportDescription {
         font-size: 1.3em;
     }
