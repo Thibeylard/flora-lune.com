@@ -13,27 +13,6 @@
 }
 
 @font-face {
-    font-family: 'blokletters-regular';
-    src: url('../fonts/blokletters-balpen.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'blokletters-bold';
-    src: url('../fonts/blokletters-viltstift.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'blokletters-thin';
-    src: url('../fonts/blokletters-potlood.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'pepita-script';
     src: url('../fonts/pepita_script_3_w01_regular.woff') format('woff');
     font-weight: normal;
@@ -107,7 +86,7 @@ a.backButton:visited, a.backButton:hover {
 
 .blokletter_title,
 .book_title {
-    font-family: 'blokletters-thin', sans-serif;
+    font-family: 'pepita-script', sans-serif;
     color: white;
     font-weight: bold;
     margin: 5px 5px 5px auto;
@@ -310,10 +289,11 @@ section#characters {
 
 .elementCoreTitle {
     flex-direction: column;
-    font-family: 'blokletters-bold', sans-serif;
+    font-family: 'lilly', sans-serif;
     color: white;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 3em;
+    font-weight: normal;
     margin: 0;
     border-bottom: rgba(255, 255, 255, 0.5) solid 10px;
 }
@@ -594,8 +574,8 @@ p.writingSummary {
 
     .pencils {
         display: block;
-        width: 250px;
-        margin: -5px -5px -5px -40px;
+        width: 200px;
+        margin: -5px -5px -5px -30px;
         padding: 0;
     }
 
@@ -605,12 +585,13 @@ p.writingSummary {
     }
 
     .pencilLabels {
-        font-family: 'blokletters-regular', sans-serif;
+        font-family: 'caroni', sans-serif;
         position: relative;
         color: black;
         text-decoration: none;
-        left: 40px;
-        top: 27px;
+        font-size: 1.4em;
+        left: 50px;
+        top: 23px;
         margin: 0;
         padding: 0;
     }
@@ -778,6 +759,23 @@ p.writingSummary {
         --responsive-state: laptop_l;
     }
 
+    .pencils {
+        display: block;
+        width: 230px;
+        margin: 5px -5px 5px -30px;
+        padding: 0;
+    }
+    .pencilLabels:hover {
+        color: orangered;
+        cursor: pointer;
+    }
+    .pencilLabels {
+        font-size: 1.6em;
+        left: 50px;
+        top: 35px;
+        margin: 0;
+        padding: 0;
+    }
     /*
 =============================================================================
 ------------------------------------------------------------------------BOOK SECTION

@@ -56,23 +56,23 @@ let pencilTexts = $(".pencilLabels");
 pencilTexts.hover(
     function() {
         $(this).animate({
-            left: "60px"
+            left: "65px"
         });
         $(this).next(navPencils).animate({
-            margin: "-5px -5px -5px -20px"
+            'margin-left': "-15px"
         })
     },
     function() {
         $(this).animate({
-            left: "40px"
+            left: "50px"
         });
         $(this).next(navPencils).animate({
-            margin: "-5px -5px -5px -40px"
+            'margin-left': "-30px"
         })
     });
 
 pencilTexts.click(function(e) { // Nav button click event : Scroll to according section when clicked.
-    if(!$(this).hasClass("backLink")){
+    if (!$(this).hasClass("backLink")) {
         e.preventDefault();
         let destinationId = $(this).attr("href");
         let destination = $(`section${destinationId}`);
