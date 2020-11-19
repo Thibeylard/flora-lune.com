@@ -558,7 +558,7 @@ p.writingSummary {
         position: relative;
         color: black;
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: 1.4em;
         left: 50px;
         top: 23px;
         margin: 0;
@@ -703,6 +703,24 @@ p.writingSummary {
 @media all and (min-device-width: 1440px) {
      :root {
         --responsive-state: laptop_l;
+    }
+
+    .pencils {
+        display: block;
+        width: 230px;
+        margin: 5px -5px 5px -30px;
+        padding: 0;
+    }
+    .pencilLabels:hover {
+        color: orangered;
+        cursor: pointer;
+    }
+    .pencilLabels {
+        font-size: 1.6em;
+        left: 50px;
+        top: 35px;
+        margin: 0;
+        padding: 0;
     }
     /*
 =============================================================================

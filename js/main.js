@@ -59,7 +59,7 @@ pencilTexts.hover(
             left: "65px"
         });
         $(this).next(navPencils).animate({
-            margin: "-5px -5px -5px -15px"
+            'margin-left': "-15px"
         })
     },
     function() {
@@ -67,7 +67,7 @@ pencilTexts.hover(
             left: "50px"
         });
         $(this).next(navPencils).animate({
-            margin: "-5px -5px -5px -30px"
+            'margin-left': "-30px"
         })
     });
 
