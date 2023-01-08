@@ -51,41 +51,11 @@
     --responsive-state: smartphone;
 }
 
-body {
-    background-image: url("../img/starsky.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-
-header,
-section#page {
-    height: 100%;
-
-}
-
-header {
-    vertical-align: top;
-}
-
-header nav {
-    display: none;
-}
 
 section#page {
     width: 100%;
 }
 
-.bookCover {
-    display: none;
-}
-
-#logo {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-}
 
 p {
     text-align: justify;
@@ -120,18 +90,17 @@ p {
     font-size: 3.5em;
 }
 
-.pepita_title,
-.pepita_book_title {
+.pepita_title {
     font-family: 'pepita-script', sans-serif;
-    color: white;
-    font-size: 5em;
-    margin: 5px 5px 5px auto;
+    color: black;
+    margin-top: 150px;
+    font-size: 3em;
     font-weight: normal;
     text-align: center;
 }
 
-.pepita_title {
-    width: 80%;
+img#feather {
+    width: 50px;
 }
 
 .bookSynopsis {
@@ -150,8 +119,6 @@ p {
 .handdrawn {
     font-family: 'caroni', sans-serif;
     font-size: 3em;
-    background-image: url("../img/bookPageBackground.png");
-    background-repeat: repeat-y;
     padding: 1% 2% 1% 10%;
 }
 
@@ -563,13 +530,6 @@ p.writingSummary {
         height: 30vh;
     }
 
-    header nav {
-        display: block;
-        position: fixed;
-        left: -30px;
-        top: 40vh;
-    }
-
     .pencils {
         display: block;
         width: 250px;
@@ -599,11 +559,6 @@ p.writingSummary {
         font-weight: normal;
         margin: 5px;
         width: 80%;
-    }
-
-    .pepita_title {
-        font-size: 6em;
-        margin: 10px;
     }
 
     .handdrawn {
