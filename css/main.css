@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'abelregular';
+    src: url('../fonts/abel-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'caroni';
     src: url('../fonts/caroni-regular.woff') format('woff');
     font-weight: normal;
@@ -43,7 +50,7 @@
 
 /*
 =============================================================================
------------------------------------------------------------------------- SMARTPHONES
+------------------------------------------------------------------------ DEFAULT RULES (SMARTPHONES)
 =============================================================================
 */
 
@@ -51,83 +58,127 @@
     --responsive-state: smartphone;
 }
 
+body {
+    margin: 0px;
+}
 
 section#page {
     width: 100%;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#title_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_flower {
+    height: 150px;
+}
+
+/* #title_bar > h1 {
+    color: rgba(255, 192, 203, 1);
+} */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding: 0.5em 0em 0.5em 0em; */
+    background-color: rgba(255, 192, 203, 1);
+}
+
+nav > a {
+    margin: 0em 0.4em 0em 0.4em;
+    color: rgba(255, 245, 238, 1)
+}
 
 p {
     text-align: justify;
 }
 
-.blokletter_title,
-.book_title {
-    font-family: 'blokletters-thin', sans-serif;
-    color: white;
-    font-weight: bold;
-    margin: 5px 5px 5px auto;
-    text-align: center;
-}
-
-.book_title {
-    margin: 5% 5% 1% 5%;
-    font-size: 5em;
-}
-
-
-.mainLink {
-    text-align: center;
-    color: white;
-    opacity: 70%;
-    text-decoration: underline;
-    margin: 0 0 4% 0;
-    font-family: caroni, sans-serif;
-}
-
-.blokletter_title {
-    width: 80%;
-    font-size: 3.5em;
-}
-
 .pepita_title {
     font-family: 'pepita-script', sans-serif;
     color: black;
-    margin-top: 150px;
     font-size: 3em;
     font-weight: normal;
     text-align: center;
 }
 
-img#feather {
+img#coffee_title {
     width: 50px;
+    margin-left:1em;
 }
 
-.bookSynopsis {
-    font-family: 'caroni', sans-serif;
-    color: antiquewhite;
-    font-size: 3em;
-    text-align: center;
-    width: 80%;
+img#author_pic {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-bottom: 20px solid #FFC0CB;;
+}
+
+
+p {
+    width: 95%;
     margin: auto;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding: 0.5em 0em 0.5em 0em;
 }
 
-.bookSynopsisWrapper {
-    background-color: rgba(0, 0, 0, 0.3);
+p {
+}
+
+.divider {
+    margin: 2em 0em 2em 0em;
+    max-width: 100%;
+    height: auto;
 }
 
 .handdrawn {
     font-family: 'caroni', sans-serif;
-    font-size: 3em;
-    padding: 1% 2% 1% 10%;
+    font-size: 2em;
 }
 
-.divider {
-    text-align: center;
+.bookDescription {
+    font-family: 'abelregular', sans-serif;
+    font-size: 1em;
 }
 
-.divider img {
-    width: 80%;
+#bookCoverContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookCover {
+    max-width: 60%;
+    height: auto;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+nav#merch_bar {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: #FFC0CB dashed 10px;
+    border-bottom: #FFC0CB dashed 10px;
+    margin: 1em 0em 1em 0em;
+}
+
+.merch_button {
+    height: 150px;
+    width: auto;
 }
 
 div#credits {
@@ -137,371 +188,6 @@ div#credits {
     text-align: center;
     border: 1px dashed white;
     color: white;
-}
-
-
-/*
-=============================================================================
-------------------------------------------------------------------------INTRODUCTION SECTION
-=============================================================================
-*/
-
-section#introduction {
-    margin: 50px 50px 20px;
-    text-align: right;
-}
-
-section#introduction > * {
-    display: inline-block;
-    vertical-align: top;
-}
-
-section#introduction p {
-    width: 90%;
-    margin-right: 40px;
-    margin-top: 0;
-    text-align: justify;
-}
-
-#socialMediaWrapper > * {
-    display: none;
-}
-
-
-/*
-=============================================================================
-------------------------------------------------------------------------BOOK SECTION
-=============================================================================
-*/
-
-section#books {
-    text-align: center;
-}
-
-.bookLink,
-#bookCover,
-.bookCover {
-    border: 2px solid white;
-    opacity: 1;
-    border-radius: 0 30px 30px 0;
-}
-
-.bookLink {
-    margin-top: 30px;
-    width: 70%;
-    max-width: 500px;
-    transition: 0.3s;
-}
-
-.bookLink:hover {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s;
-    border: 10px solid white;
-    margin-top: -10px;
-}
-
-
-/*
------------------------------------------------------------------------- Book Page
-*/
-
-section#characters {
-    text-align: center;
-}
-
-.slideshow {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    --current-slide-index: 0;
-    --max-slide-index: 0;
-}
-
-.slideshowElementWrapper {
-    display: flex;
-    flex: none;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    margin: 0 5% 0 5%;
-}
-
-.elementCoreWrapper {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.50);
-    border-radius: 40px;
-}
-
-.slideshowScrollersWrapper {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    margin: auto;
-}
-
-.elementScrollLeft,
-.elementScrollRight {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1% 0 1%;
-    border-radius: 20px;
-}
-
-.elementScrollLeft > img,
-.elementScrollRight > img {
-    height: 50px
-}
-
-.elementCoreTitle {
-    flex-direction: column;
-    font-family: 'blokletters-bold', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 3.5em;
-    margin: 0;
-    border-bottom: rgba(255, 255, 255, 0.5) solid 10px;
-}
-
-.elementCoreImgWrapper {
-    flex: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-}
-
-.elementCoreImgWrapper > img {
-    height: 100%;
-    opacity: 75%;
-}
-
-.elementCoreDescription {
-    display: none;
-}
-
-
-/* The Modal (background) */
-
-#mobileElementModal {
-    display: none;
-    flex-direction: column;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
-}
-
-#modalTitle {
-    flex: 1;
-    color: white;
-    font-family: lilly, sans-serif;
-    text-align: center;
-    font-size: 5em;
-}
-
-#modalDescription {
-    flex: 10;
-    font-family: caroni, sans-serif;
-    color: white;
-    margin: auto;
-    width: 90%;
-    text-align: justify;
-    font-size: 2.5em;
-}
-
-
-/* The Close Button */
-
-#closeBar {
-    flex: 1;
-    color: white;
-    font-size: 6em;
-    font-weight: bold;
-    text-align: right;
-}
-
-#closeBar > span {
-    margin: 0 2% 0 1%;
-}
-
-
-/*
-=============================================================================
------------------------------------------------------------------------- WRITINGS SECTION
-=============================================================================
-*/
-
-.writing {
-    margin-bottom: 80px;
-}
-
-.writingSummary {
-    margin: 0 0 60px 0;
-}
-
-div.writingBar {
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-
-div.writingBarBody {
-    flex: auto;
-    display: flex;
-    height: 109px;
-    align-items: center;
-    background-image: url("../img/bookmarkBody.png");
-}
-
-img.writingBarEnd {
-    flex: none;
-    height: 109px;
-}
-
-span.writingTitle {
-    flex: auto;
-    align-self: center;
-    justify-self: flex-end;
-    font-size: 3em;
-    margin: 0 0 15px 0;
-}
-
-.writingButton:hover {
-    cursor: pointer;
-    filter: brightness(1.4);
-}
-
-.writingButton {
-    flex: initial;
-    justify-self: flex-end;
-    margin: 0 15px 10px 15px;
-    max-width: 75px;
-}
-
-p.writingSummary {
-    display: none;
-    position: relative;
-    bottom: 16px;
-    width: 90%;
-    z-index: -1;
-    font-size: 0.8em;
-    margin-left: auto;
-    margin-top: auto;
-    border-radius: 0 0 30px 30px;
-    padding: 20px;
-    background-color: #4a635e;
-    box-shadow: 0 15px rgba(0, 0, 0, 0.5);
-    --is-down: false;
-}
-
-
-/*
-=============================================================================
------------------------------------------------------------------------- AUTHOR SECTION
-=============================================================================
-*/
-
-section#author aside {
-    text-align: right;
-}
-
-section#author div:nth-of-type(1) {
-    text-align: right;
-}
-
-section#author aside img {
-    width: 100%;
-}
-
-section#author p {
-    display: inline-block;
-}
-
-.bookReference {
-    font-family: 'lilly', sans-serif;
-    font-style: italic;
-    color: orangered;
-}
-
-.bookReference:hover {
-    text-decoration: underline;
-    color: orange;
-    cursor: pointer;
-}
-
-
-/*
-=============================================================================
------------------------------------------------------------------------- SUPPORT SECTION
-=============================================================================
-*/
-
-#support h1 {
-    text-align: center;
-    font-weight: bold;
-    margin: auto;
-}
-
-#supportBlock > * {
-    vertical-align: top;
-}
-
-#supportLinks {
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-#descriptionLinks {
-    display: none;
-}
-
-#tipeeeSupport {
-    height: 280px;
-}
-
-img.supportLink {
-    height: 200px;
-    margin: 25px 12px 0 13px;
-}
-
-img.supportLink:hover {
-    cursor: pointer;
-}
-
-#supportTitle,
-#supportDescription,
-span.writingTitle,
-p.writingSummary {
-    font-family: 'lilly', sans-serif;
-    color: antiquewhite;
-}
-
-#supportDescription {
-    display: none;
 }
 
 /*
@@ -515,185 +201,6 @@ p.writingSummary {
         --responsive-state: laptop;
     }
 
-    section#page {
-        width: 80%;
-        margin-left: 20%;
-    }
-
-    #logo {
-        position: fixed;
-    }
-
-    .bookCover {
-        display: block;
-        position: fixed;
-        height: 30vh;
-    }
-
-    .pencils {
-        display: block;
-        width: 250px;
-        margin: -5px -5px -5px -40px;
-        padding: 0;
-    }
-
-    .pencilLabels:hover {
-        color: orangered;
-        cursor: pointer;
-    }
-
-    .pencilLabels {
-        font-family: 'blokletters-regular', sans-serif;
-        position: relative;
-        color: black;
-        text-decoration: none;
-        left: 40px;
-        top: 27px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .blokletter_title {
-        text-align: right;
-        font-size: 4em;
-        font-weight: normal;
-        margin: 5px;
-        width: 80%;
-    }
-
-    .handdrawn {
-        font-size: 2.2em;
-    }
-
-    /*
-    =============================================================================
-    ------------------------------------------------------------------------INTRODUCTION SECTION
-    =============================================================================
-    */
-    section#introduction p {
-        width: 65%;
-    }
-
-    #socialMediaWrapper > * {
-        display: block;
-        width: 80px;
-        height: 80px;
-        margin-bottom: 15px;
-    }
-
-    .socialMediaIcon:hover {
-        filter: brightness(1.4);
-        cursor: pointer;
-    }
-
-    /*
-    =============================================================================
-    ------------------------------------------------------------------------BOOK SECTION
-    =============================================================================
-    */
-    /*
-    ------------------------------------------------------------------------ Book Page
-    */
-    .elementCoreImgWrapper {
-        float: left;
-        flex: 2;
-    }
-
-    .elementCoreImgWrapper > img {
-        height: 50%;
-    }
-
-    .elementCoreDescription {
-        flex: 2;
-        font-family: 'caroni', sans-serif;
-        color: white;
-        text-align: justify;
-        font-size: 2em;
-        padding: 1% 2% 1% 2%;
-        height: 500px;
-        overflow-y: scroll;
-        margin: 0;
-        display: block;
-    }
-
-    .bookSynopsis {
-        font-size: 2em;
-    }
-
-    /*
-    =============================================================================
-    ------------------------------------------------------------------------ WRITINGS SECTION
-    =============================================================================
-    */
-    section#writings img.writingButton {
-        margin: 0 10px 10px 10px;
-        max-width: 60px;
-    }
-
-    div.writingBar {
-        width: 90%;
-        margin-left: auto;
-    }
-
-    span.writingTitle {
-        font-size: 2em;
-    }
-
-    p.writingSummary {
-        width: 70%;
-        z-index: -1;
-        font-size: 1em;
-        max-width: 900px;
-    }
-
-    /*
-    =============================================================================
-    ------------------------------------------------------------------------ AUTHOR SECTION
-    =============================================================================
-    */
-    section#author aside img {
-        width: 70%;
-    }
-
-    .bookReference {
-        font-size: 0.7em;
-    }
-
-    /*
-    =============================================================================
-    ------------------------------------------------------------------------ SUPPORT SECTION
-    =============================================================================
-    */
-    #supportLinks {
-        width: 40%;
-    }
-
-    img.supportLink,
-    #tipeeeSupport {
-        margin: 15px 2px 0 3px;
-        height: 80px;
-        --focus-height: 105px;
-        --focus-margin: 0;
-        --unfocus-height: 80px;
-        --unfocus-margin: 15px 2px 0 3px;
-    }
-
-    #descriptionLinks {
-        display: inline-block;
-        width: 55%
-    }
-
-    #supportDescription {
-        display: inline-block;
-        width: 100%;
-        height: 200px;
-        margin: auto;
-        font-size: 1em;
-        border-radius: 10px 50px 10px 50px;
-        padding: 20px;
-        background-color: #374845;
-        box-shadow: 0 15px rgba(0, 0, 0, 0.5);
-    }
 }
 
 /*
@@ -707,56 +214,4 @@ p.writingSummary {
         --responsive-state: laptop_l;
     }
 
-    /*
-=============================================================================
-------------------------------------------------------------------------BOOK SECTION
-=============================================================================
-*/
-    /*
-    ------------------------------------------------------------------------ Book Page
-    */
-    .elementCoreImgWrapper > img {
-        height: 80%;
-    }
-
-
-    .bookSynopsis {
-        font-size: 3em;
-    }
-
-    /*
-    =============================================================================
-    ------------------------------------------------------------------------ WRITINGS SECTION
-    =============================================================================
-    */
-    span.writingTitle {
-        font-size: 3em;
-    }
-
-    p.writingSummary {
-        width: 90%;
-    }
-
-    /*
-=============================================================================
------------------------------------------------------------------------- SUPPORT SECTION
-=============================================================================
-*/
-    #supportLinks {
-        width: 40%;
-    }
-
-    img.supportLink,
-    #tipeeeSupport {
-        margin: 25px 12px 0 13px;
-        height: 155px;
-        --focus-height: 155px;
-        --focus-margin: 0;
-        --unfocus-height: 100px;
-        --unfocus-margin: 25px 12px 0 13px;
-    }
-
-    #supportDescription {
-        font-size: 1.3em;
-    }
 }
